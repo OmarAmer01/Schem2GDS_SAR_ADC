@@ -1,0 +1,6 @@
+./output/sar_dbe.out.spef.minTLU_125.spef for scenarios: 
+	 scenario: default, corner type: late
+
+./output/sar_dbe.out.spef.maxTLU_-40.spef for scenarios: 
+	 scenario: default, corner type: early
+

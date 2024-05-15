@@ -1,0 +1,324 @@
+
+                                 Formality (R)
+
+                 Version V-2023.12 for linux64 - Nov 16, 2023 
+
+                    Copyright (c) 1988 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Build: 8560677
+Hostname: elc-auc-vlsi-28-lnx
+Current time: Fri May 10 15:58:50 2024
+
+Loading db file '/eda/synopsys/fm/V-2023.12/libraries/syn/gtech.db'
+
+Script: fm_sc.tcl
+
+# Formality Script
+# (B O N U S)
+set_svf /home/vlsi/Desktop/asic_final/impl/synth/default.svf
+SVF set to '/home/vlsi/Desktop/asic_final/impl/synth/default.svf'.
+1
+# Read FILES
+# Read Design Files
+set DESIGN_FILE_LIST [open ../synth/syn_filelist.f "r"]
+file12
+set DESIGN_FILE_GLOBS [list]
+while {[gets $DESIGN_FILE_LIST file] != -1} {
+    lappend DESIGN_FILE_GLOBS $file
+}
+# Close the file
+close $DESIGN_FILE_LIST
+set DESIGN_FILES [list]
+foreach file_glob $DESIGN_FILE_GLOBS {
+    set matches [glob ../../$file_glob]
+    foreach match $matches {
+        lappend DESIGN_FILES $match
+        puts $DESIGN_FILES
+    }
+}
+../.././intf/dbe_if.sv
+../.././intf/dbe_if.sv ../.././hdl/custom_sar_reg.sv
+../.././intf/dbe_if.sv ../.././hdl/custom_sar_reg.sv ../.././hdl/sar_dbe.sv
+../.././intf/dbe_if.sv ../.././hdl/custom_sar_reg.sv ../.././hdl/sar_dbe.sv ../.././hdl/set_propagator.sv
+../.././intf/dbe_if.sv ../.././hdl/custom_sar_reg.sv ../.././hdl/sar_dbe.sv ../.././hdl/set_propagator.sv ../.././hdl/padded_sar_dbe.sv
+read_sverilog -r $DESIGN_FILES
+No target library specified, default is WORK
+Loading verilog file '/home/vlsi/Desktop/asic_final/intf/dbe_if.sv'
+Loading verilog file '/home/vlsi/Desktop/asic_final/hdl/custom_sar_reg.sv'
+Loading verilog file '/home/vlsi/Desktop/asic_final/hdl/sar_dbe.sv'
+Loading verilog file '/home/vlsi/Desktop/asic_final/hdl/set_propagator.sv'
+Loading verilog file '/home/vlsi/Desktop/asic_final/hdl/padded_sar_dbe.sv'
+Current container set to 'r'
+1
+set_top r:/WORK/sar_dbe 
+Setting top design to 'r:/WORK/sar_dbe'
+Status:   Elaborating design sar_dbe   ...  
+Status:   Elaborating design custom_sar_reg  10 ...  
+Information: Created design named 'custom_sar_reg_ADC_RESOLUTION10'. (FE-LINK-13)
+Status:   Elaborating design set_propagator  10 ...  
+Information: Created design named 'set_propagator_ADC_RESOLUTION10'. (FE-LINK-13)
+Status:  Implementing inferred operators...
+Top design successfully set to 'r:/WORK/sar_dbe'
+Reference design set to 'r:/WORK/sar_dbe'
+1
+read_verilog -container i -libname WORK -05 { /home/vlsi/Desktop/asic_final/impl/synth/sar_dbe.v } 
+Loading verilog file '/home/vlsi/Desktop/asic_final/impl/synth/sar_dbe.v'
+Current container set to 'i'
+1
+read_db { /eda/synopsys/SAED90_EDK/SAED_EDK90nm/Digital_Standard_cell_Library/synopsys/models/saed90nm_max_htm_lvt.db } 
+Loading db file '/eda/synopsys/SAED90_EDK/SAED_EDK90nm/Digital_Standard_cell_Library/synopsys/models/saed90nm_max_htm_lvt.db'
+1
+set_top i:/WORK/sar_dbe_ADC_RESOLUTION10 
+Setting top design to 'i:/WORK/sar_dbe_ADC_RESOLUTION10'
+Status:  Implementing inferred operators...
+
+************ Library Checking Summary ************
+Warning:  60 unlinked power cell(s) with no power down function on an ff or latch.
+        Use 'report_libraries -defects all' for more details.
+**************************************************
+
+Top design successfully set to 'i:/WORK/sar_dbe_ADC_RESOLUTION10'
+Implementation design set to 'i:/WORK/sar_dbe_ADC_RESOLUTION10'
+1
+start_gui
+fm_shell (setup)> match 
+Reference design is 'r:/WORK/sar_dbe'
+Implementation design is 'i:/WORK/sar_dbe_ADC_RESOLUTION10'
+Status:  Checking designs...
+Status:  Building verification models...
+Ref top is sar_dbe
+Imp top is sar_dbe_ADC_RESOLUTION10
+Ref SVF is sar_dbe_ADC_RESOLUTION10
+Status:  Processing Guide Commands...
+SVF BEGIN: Timestamp: Cpu: 0.000h, Wall: 0.003h, Mem: 0.696G, Current time: Fri May 10 15:59:01 2024
+SVF END: Timestamp: Cpu: 0.000h, Wall: 0.003h, Mem: 0.696G, Current time: Fri May 10 15:59:01 2024
+
+***************************** Guidance Summary *****************************
+                                         Status
+Command                 Accepted   Rejected  Unsupported  Unprocessed  Total
+----------------------------------------------------------------------------
+change_names        :          1          0          0          0          1
+constant            :         12          0          0          0         12
+environment         :          7          0          0          0          7
+file_info           :          4          0          0          0          4
+instance_map        :          2          0          0          0          2
+inv_push            :         10          0          0          0         10
+mark                :          6          0          0          0          6
+ungroup             :          2          0          0          0          2
+----------------------------------------------------------------------------
+Total               :         44          0          0          0         44
+
+
+Note: No guide_hier_map commands were found in the SVF. It is
+      important to enable guide_hier_map generation in
+      Design Compiler to avoid SVF rejections that can cause
+      aborted/failing points or long run times during verification.
+      In Design Compiler the recommended methodology uses variable
+      hdlin_enable_hier_map and command set_verification_top.
+
+SVF files read:
+      /home/vlsi/Desktop/asic_final/impl/synth/default.svf
+
+SVF files produced:
+  /home/vlsi/Desktop/asic_final/impl/formal_v/formality_svf/
+    svf.txt
+****************************************************************************
+
+Status:  Matching...
+
+*********************************** Matching Results ***********************************
+ 33 Compare points matched by name
+ 0 Compare points matched by signature analysis
+ 0 Compare points matched by topology
+ 3 Matched primary inputs, black-box outputs
+ 0(0) Unmatched reference(implementation) compare points
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs
+****************************************************************************************
+
+1
+fm_shell (match)> verify 
+Reference design is 'r:/WORK/sar_dbe_ADC_RESOLUTION10'
+Implementation design is 'i:/WORK/sar_dbe_ADC_RESOLUTION10'
+
+*********************************** Matching Results ***********************************
+ 33 Compare points matched by name
+ 0 Compare points matched by signature analysis
+ 0 Compare points matched by topology
+ 3 Matched primary inputs, black-box outputs
+ 0(0) Unmatched reference(implementation) compare points
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs
+****************************************************************************************
+
+Status:  Verifying...
+Compare point U_ctrl_logic_sar_reg_out_reg_0_ failed (is not equivalent)
+
+
+********************************* Verification Results *********************************
+Verification FAILED
+   ATTENTION: No guide_hier_map commands were found in the SVF. It is
+              important to enable guide_hier_map generation in
+              Design Compiler to avoid SVF rejections that can cause
+              aborted/failing points or long run times during verification.
+              In Design Compiler the recommended methodology uses variable
+              hdlin_enable_hier_map and command set_verification_top.
+-------------------
+ Reference design: r:/WORK/sar_dbe_ADC_RESOLUTION10
+ Implementation design: i:/WORK/sar_dbe_ADC_RESOLUTION10
+ 32 Passing compare points
+ 1 Failing compare points (1 matched, 0 unmatched)
+ 0 Aborted compare points
+ 0 Unverified compare points
+----------------------------------------------------------------------------------------
+Matched Compare Points     BBPin    Loop   BBNet     Cut    Port     DFF     LAT   TOTAL
+----------------------------------------------------------------------------------------
+Passing (equivalent)           0       0       0       0      11      21       0      32
+Failing (not equivalent)       0       0       0       0       0       0       1       1
+****************************************************************************************
+Info:  Try the analyze_points command to see if Formality can determine potential
+causes, or suggest next steps for a FAILED or INCONCLUSIVE verification.
+See the man page for analyze_points usage and options.
+0
+fm_shell (verify)> analyze_points -failing 
+Found 1 Required Input
+--------------------------------
+A required input is one that is designated as required
+for all failing patterns for one or more cpoints and fans out 
+to more failing than passing points.
+This implies that it may be driving downstream logic that is related to
+the failure(s)
+--------------------------------
+i:/WORK/sar_dbe_ADC_RESOLUTION10/u_SET_PROP_q_reg_0_/\*dff.00\*
+    Fans out to 1 failing and 2 passing points and has
+    logic value '1' for 1 compare point(s):
+        i:/WORK/sar_dbe_ADC_RESOLUTION10/U_ctrl_logic_sar_reg_out_reg_0_
+
+-----------
+--------------------------------
+****************************************************************************************
+Analysis Completed
+1
+fm_shell (verify)> set_dont_verify {r:/WORK/sar_dbe_ADC_RESOLUTION10/U_ctrl_logic_sar_reg_out_reg_0_ } 
+Set don't verify point 'r:/WORK/sar_dbe_ADC_RESOLUTION10/U_ctrl_logic_sar_reg_out_reg_0_'
+1
+fm_shell (verify)> analyze_points -failing 
+Found 1 Required Input
+--------------------------------
+A required input is one that is designated as required
+for all failing patterns for one or more cpoints and fans out 
+to more failing than passing points.
+This implies that it may be driving downstream logic that is related to
+the failure(s)
+--------------------------------
+i:/WORK/sar_dbe_ADC_RESOLUTION10/u_SET_PROP_q_reg_0_/\*dff.00\*
+    Fans out to 1 failing and 2 passing points and has
+    logic value '1' for 1 compare point(s):
+        i:/WORK/sar_dbe_ADC_RESOLUTION10/U_ctrl_logic_sar_reg_out_reg_0_
+
+-----------
+--------------------------------
+****************************************************************************************
+Analysis Completed
+1
+fm_shell (verify)> verify 
+Reference design is 'r:/WORK/sar_dbe_ADC_RESOLUTION10'
+Implementation design is 'i:/WORK/sar_dbe_ADC_RESOLUTION10'
+Status:  Matching...
+
+*********************************** Matching Results ***********************************
+ 32 Compare points matched by name
+ 0 Compare points matched by signature analysis
+ 0 Compare points matched by topology
+ 3 Matched primary inputs, black-box outputs
+ 0(0) Unmatched reference(implementation) compare points
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs
+****************************************************************************************
+
+Status:  Continuing verification, 0F/0A/31P/1U (96%)...
+
+
+********************************* Verification Results *********************************
+Verification SUCCEEDED
+----------------------
+ Reference design: r:/WORK/sar_dbe_ADC_RESOLUTION10
+ Implementation design: i:/WORK/sar_dbe_ADC_RESOLUTION10
+ 32 Passing compare points
+----------------------------------------------------------------------------------------
+Matched Compare Points     BBPin    Loop   BBNet     Cut    Port     DFF     LAT   TOTAL
+----------------------------------------------------------------------------------------
+Passing (equivalent)           0       0       0       0      11      21       0      32
+Failing (not equivalent)       0       0       0       0       0       0       0       0
+Not Compared
+  Don't verify                 0       0       0       0       0       0       1       1
+****************************************************************************************
+1
+1
+match
+Reference design is 'r:/WORK/sar_dbe_ADC_RESOLUTION10'
+Implementation design is 'i:/WORK/sar_dbe_ADC_RESOLUTION10'
+    
+*********************************** Matching Results ***********************************    
+ 32 Compare points matched previously    
+ 0 Compare points matched by name    
+ 0 Compare points matched by signature analysis    
+ 0 Compare points matched by topology    
+ 3 Matched primary inputs, black-box outputs    
+ 0(0) Unmatched reference(implementation) compare points    
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs    
+****************************************************************************************
+
+1
+verify
+Reference design is 'r:/WORK/sar_dbe_ADC_RESOLUTION10'
+Implementation design is 'i:/WORK/sar_dbe_ADC_RESOLUTION10'
+    
+*********************************** Matching Results ***********************************    
+ 32 Compare points matched previously    
+ 0 Compare points matched by name    
+ 0 Compare points matched by signature analysis    
+ 0 Compare points matched by topology    
+ 3 Matched primary inputs, black-box outputs    
+ 0(0) Unmatched reference(implementation) compare points    
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs    
+****************************************************************************************
+
+Status:  Verifying...
+
+
+********************************* Verification Results *********************************
+Verification SUCCEEDED
+----------------------
+ Reference design: r:/WORK/sar_dbe_ADC_RESOLUTION10
+ Implementation design: i:/WORK/sar_dbe_ADC_RESOLUTION10
+ 32 Passing compare points
+----------------------------------------------------------------------------------------
+Matched Compare Points     BBPin    Loop   BBNet     Cut    Port     DFF     LAT   TOTAL
+----------------------------------------------------------------------------------------
+Passing (equivalent)           0       0       0       0      11      21       0      32
+Failing (not equivalent)       0       0       0       0       0       0       0       0
+Not Compared
+  Don't verify                 0       0       0       0       0       0       1       1
+****************************************************************************************
+1
+1
+fm_shell (verify)> exit
+
+Maximum memory usage for this session: 713 MB
+CPU usage for this session: 3.21 seconds ( 0.00 hours )
+Current time: Fri May 10 16:10:28 2024
+Elapsed time: 697 seconds ( 0.19 hours )
+
+Thank you for using Formality (R)!

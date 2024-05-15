@@ -1,0 +1,543 @@
+
+                           Design Compiler Graphical 
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+                 Version V-2023.12 for linux64 - Nov 27, 2023 
+
+                    Copyright (c) 1988 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+Initializing gui preferences from file  /home/vlsi/.synopsys_dc_gui/preferences.tcl
+Current time:       Fri May 10 17:39:27 2024
+Hostname:           elc-auc-vlsi-28-lnx
+CPU Model:          11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz
+CPU Details:        Cores = 1 : Sockets = 1 : Cache Size = 24576 KB : Freq = 2.80 GHz
+OS:                 Linux 5.4.268-1.el7.elrepo.x86_64
+RAM:                 31 GB (Free   2 GB)
+Swap:                15 GB (Free  15 GB)
+Work Filesystem:    /home mounted to /dev/mapper/centos-home
+Tmp Filesystem:     / mounted to /dev/mapper/centos-root
+Work Disk:          109 GB (Free  83 GB)
+Tmp Disk:           699 GB (Free 245 GB)
+
+CPU Load: 61%, Ram Free: 2 GB, Swap Free: 15 GB, Work Disk Free: 83 GB, Tmp Disk Free: 245 GB
+#################################################
+# * Synthesis Script.
+# * Date 4/27/24
+# * Author Omar T. Amer
+#################################################
+# Gotta go fast
+set_host_options -max_cores 4
+1
+####### SET FILE PATHS
+set MAX_PAD_LIB "/eda/synopsys/SAED90_EDK/SAED_EDK90nm_IO/IO_Standard_Cell_Library/synopsys/models/saed90nm_io_max.db"
+/eda/synopsys/SAED90_EDK/SAED_EDK90nm_IO/IO_Standard_Cell_Library/synopsys/models/saed90nm_io_max.db
+set MIN_PAD_LIB "/eda/synopsys/SAED90_EDK/SAED_EDK90nm_IO/IO_Standard_Cell_Library/synopsys/models/saed90nm_io_min.db"
+/eda/synopsys/SAED90_EDK/SAED_EDK90nm_IO/IO_Standard_Cell_Library/synopsys/models/saed90nm_io_min.db
+set TARGET_LIB_PATH "/eda/synopsys/SAED90_EDK/SAED_EDK90nm/Digital_Standard_cell_Library/synopsys/models/"
+/eda/synopsys/SAED90_EDK/SAED_EDK90nm/Digital_Standard_cell_Library/synopsys/models/
+set REPORT_DIR "./reports"
+./reports
+###### SET FILE NAMES
+set TARGET_LIB_MIN_FILENAME "saed90nm_min_ltl_lvt"
+saed90nm_min_ltl_lvt
+set TARGET_LIB_MAX_FILENAME "saed90nm_max_htm_lvt"
+saed90nm_max_htm_lvt
+set TARGET_LIB_MIN "$TARGET_LIB_MIN_FILENAME.db"
+saed90nm_min_ltl_lvt.db
+set TARGET_LIB_MAX "$TARGET_LIB_MAX_FILENAME.db"
+saed90nm_max_htm_lvt.db
+##### Set things up...
+set TOP_MODULE  "sar_dbe"
+sar_dbe
+set ADC_RESOLUTION 10
+10
+# Set the search path
+set_app_var search_path "$TARGET_LIB_PATH"
+/eda/synopsys/SAED90_EDK/SAED_EDK90nm/Digital_Standard_cell_Library/synopsys/models/
+# Set target and link libraries
+## Standard Cell libraries
+set target_library [list $TARGET_LIB_MAX]
+saed90nm_max_htm_lvt.db
+## Standard Cell & Hard Macros libraries
+set link_library [list * $TARGET_LIB_MAX $MAX_PAD_LIB]
+* saed90nm_max_htm_lvt.db /eda/synopsys/SAED90_EDK/SAED_EDK90nm_IO/IO_Standard_Cell_Library/synopsys/models/saed90nm_io_max.db
+# MCMM
+set_min_library $TARGET_LIB_MAX -min_version $TARGET_LIB_MIN
+Loading db file '/eda/synopsys/SAED90_EDK/SAED_EDK90nm/Digital_Standard_cell_Library/synopsys/models/saed90nm_max_htm_lvt.db'
+Loading db file '/eda/synopsys/SAED90_EDK/SAED_EDK90nm/Digital_Standard_cell_Library/synopsys/models/saed90nm_min_ltl_lvt.db'
+1
+set_min_library $MAX_PAD_LIB -min_version $MIN_PAD_LIB
+Loading db file '/eda/synopsys/SAED90_EDK/SAED_EDK90nm_IO/IO_Standard_Cell_Library/synopsys/models/saed90nm_io_max.db'
+Loading db file '/eda/synopsys/SAED90_EDK/SAED_EDK90nm_IO/IO_Standard_Cell_Library/synopsys/models/saed90nm_io_min.db'
+1
+list_libs
+Logical Libraries:
+-------------------------------------------------------------------------
+Library		File			Path
+-------		----			----
+M saed90nm_max_htm_lvt saed90nm_max_htm_lvt.db	/eda/synopsys/SAED90_EDK/SAED_EDK90nm/Digital_Standard_cell_Library/synopsys/models
+m saed90nm_min_ltl_lvt saed90nm_min_ltl_lvt.db	/eda/synopsys/SAED90_EDK/SAED_EDK90nm/Digital_Standard_cell_Library/synopsys/models
+M saed90nm_io_max saed90nm_io_max.db	/eda/synopsys/SAED90_EDK/SAED_EDK90nm_IO/IO_Standard_Cell_Library/synopsys/models
+m saed90nm_io_min saed90nm_io_min.db	/eda/synopsys/SAED90_EDK/SAED_EDK90nm_IO/IO_Standard_Cell_Library/synopsys/models
+1
+# Read Design Files
+set DESIGN_FILE_LIST [open syn_filelist.f "r"]
+file13
+set DESIGN_FILE_GLOBS [list]
+while {[gets $DESIGN_FILE_LIST file] != -1} {
+    lappend DESIGN_FILE_GLOBS $file
+}
+# Close the file
+close $DESIGN_FILE_LIST
+set DESIGN_FILES [list]
+foreach file_glob $DESIGN_FILE_GLOBS {
+    set matches [glob ../../$file_glob]
+    foreach match $matches {
+        lappend DESIGN_FILES $match
+        puts $DESIGN_FILES
+    }
+}
+../.././intf/dbe_if.sv
+../.././intf/dbe_if.sv ../.././hdl/custom_sar_reg.sv
+../.././intf/dbe_if.sv ../.././hdl/custom_sar_reg.sv ../.././hdl/sar_dbe.sv
+../.././intf/dbe_if.sv ../.././hdl/custom_sar_reg.sv ../.././hdl/sar_dbe.sv ../.././hdl/set_propagator.sv
+../.././intf/dbe_if.sv ../.././hdl/custom_sar_reg.sv ../.././hdl/sar_dbe.sv ../.././hdl/set_propagator.sv ../.././hdl/padded_sar_dbe.sv
+read_file $DESIGN_FILES -autoread -top $TOP_MODULE -format sverilog -param ADC_RESOLUTION=>$ADC_RESOLUTION
+== READ_FILE autoread for top design 'sar_dbe' ==
+
+Starting READ_FILE autoread mode...
+Information: Adding '/home/vlsi/Desktop/asic_final/intf/dbe_if.sv'.  (AUTOREAD-100)
+Information: Adding '/home/vlsi/Desktop/asic_final/hdl/custom_sar_reg.sv'.  (AUTOREAD-100)
+Information: Adding '/home/vlsi/Desktop/asic_final/hdl/sar_dbe.sv'.  (AUTOREAD-100)
+Information: Adding '/home/vlsi/Desktop/asic_final/hdl/set_propagator.sv'.  (AUTOREAD-100)
+Information: Adding '/home/vlsi/Desktop/asic_final/hdl/padded_sar_dbe.sv'.  (AUTOREAD-100)
+Information: Scanning file { dbe_if.sv }. (AUTOREAD-303)
+Information: Scanning file { custom_sar_reg.sv }. (AUTOREAD-303)
+Information: Scanning file { sar_dbe.sv }. (AUTOREAD-303)
+Information: Scanning file { set_propagator.sv }. (AUTOREAD-303)
+Information: Scanning file { padded_sar_dbe.sv }. (AUTOREAD-303)
+Compiling source file /home/vlsi/Desktop/asic_final/intf/dbe_if.sv
+Presto compilation completed successfully.
+Compiling source file /home/vlsi/Desktop/asic_final/hdl/custom_sar_reg.sv
+Presto compilation completed successfully.
+Compiling source file /home/vlsi/Desktop/asic_final/hdl/set_propagator.sv
+Presto compilation completed successfully.
+Compiling source file /home/vlsi/Desktop/asic_final/hdl/sar_dbe.sv
+Presto compilation completed successfully.
+Elaborating top design sar_dbe
+Loading db file '/eda/synopsys/syn/V-2023.12/libraries/syn/gtech.db'
+Loading db file '/eda/synopsys/syn/V-2023.12/libraries/syn/standard.sldb'
+  Loading link library 'saed90nm_max_htm_lvt'
+  Loading link library 'saed90nm_io_max'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully. (sar_dbe_ADC_RESOLUTION10)
+Elaborated 1 design.
+Current design is now 'sar_dbe_ADC_RESOLUTION10'.
+Information: Building the design 'custom_sar_reg' instantiated from design 'sar_dbe_ADC_RESOLUTION10' with
+	the parameters "10". (HDL-193)
+
+Inferred memory devices in process
+	in routine custom_sar_reg_ADC_RESOLUTION10 line 25 in file
+		'/home/vlsi/Desktop/asic_final/hdl/custom_sar_reg.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   sar_reg_out_reg   | Flip-flop |  10   |  N  | N  | Y  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+	in routine custom_sar_reg_ADC_RESOLUTION10 line 34 in file
+		'/home/vlsi/Desktop/asic_final/hdl/custom_sar_reg.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   sar_reg_out_reg   | Flip-flop |   1   |  N  | N  | Y  | Y  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (custom_sar_reg_ADC_RESOLUTION10)
+Information: Building the design 'set_propagator' instantiated from design 'sar_dbe_ADC_RESOLUTION10' with
+	the parameters "10". (HDL-193)
+
+Inferred memory devices in process
+	in routine set_propagator_ADC_RESOLUTION10 line 27 in file
+		'/home/vlsi/Desktop/asic_final/hdl/set_propagator.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|        q_reg        | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+|        q_reg        | Flip-flop |  10   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully. (set_propagator_ADC_RESOLUTION10)
+Autoread command completed successfully.
+list_designs
+custom_sar_reg_ADC_RESOLUTION10 set_propagator_ADC_RESOLUTION10
+sar_dbe_ADC_RESOLUTION10 (*)
+1
+check_design
+ 
+****************************************
+check_design summary:
+Version:     V-2023.12
+Date:        Fri May 10 17:39:27 2024
+****************************************
+
+                   Name                                            Total
+--------------------------------------------------------------------------------
+Cells                                                               2
+    Connected to power or ground (LINT-32)                          2
+
+Nets                                                               10
+    Unloaded nets (LINT-2)                                         10
+--------------------------------------------------------------------------------
+
+Warning: In design 'sar_dbe_ADC_RESOLUTION10', net 'set_propagator_out[1]' driven by pin 'u_SET_PROP/q[1]' has no loads. (LINT-2)
+Warning: In design 'sar_dbe_ADC_RESOLUTION10', net 'set_propagator_out[2]' driven by pin 'u_SET_PROP/q[2]' has no loads. (LINT-2)
+Warning: In design 'sar_dbe_ADC_RESOLUTION10', net 'set_propagator_out[3]' driven by pin 'u_SET_PROP/q[3]' has no loads. (LINT-2)
+Warning: In design 'sar_dbe_ADC_RESOLUTION10', net 'set_propagator_out[4]' driven by pin 'u_SET_PROP/q[4]' has no loads. (LINT-2)
+Warning: In design 'sar_dbe_ADC_RESOLUTION10', net 'set_propagator_out[5]' driven by pin 'u_SET_PROP/q[5]' has no loads. (LINT-2)
+Warning: In design 'sar_dbe_ADC_RESOLUTION10', net 'set_propagator_out[6]' driven by pin 'u_SET_PROP/q[6]' has no loads. (LINT-2)
+Warning: In design 'sar_dbe_ADC_RESOLUTION10', net 'set_propagator_out[7]' driven by pin 'u_SET_PROP/q[7]' has no loads. (LINT-2)
+Warning: In design 'sar_dbe_ADC_RESOLUTION10', net 'set_propagator_out[8]' driven by pin 'u_SET_PROP/q[8]' has no loads. (LINT-2)
+Warning: In design 'sar_dbe_ADC_RESOLUTION10', net 'set_propagator_out[9]' driven by pin 'u_SET_PROP/q[9]' has no loads. (LINT-2)
+Warning: In design 'sar_dbe_ADC_RESOLUTION10', net 'set_propagator_out[10]' driven by pin 'u_SET_PROP/q[10]' has no loads. (LINT-2)
+Warning: In design 'sar_dbe_ADC_RESOLUTION10', a pin on submodule 'U_ctrl_logic' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'dummy_ground' is connected to logic 0. 
+Warning: In design 'sar_dbe_ADC_RESOLUTION10', a pin on submodule 'u_SET_PROP' is connected to logic 1 or logic 0. (LINT-32)
+   Pin 'd' is connected to logic 0. 
+1
+# Get constraints
+source ./cons.sdc
+Using operating conditions 'WORST' found in library 'saed90nm_max_htm_lvt'.
+Using operating conditions 'BEST' found in library 'saed90nm_min_ltl_lvt'.
+1
+uniquify
+1
+#compile -map_effort high -boundary_optimization -retime
+compile_ultra 
+Loading db file '/eda/synopsys/syn/V-2023.12/libraries/syn/dw_foundation.sldb'
+Information: Failed to find dw_foundation.sldb in the user defined search_path, load it from 'Synopsys Root'. (UISN-70)
+Warning: DesignWare synthetic library dw_foundation.sldb is added to the synthetic_library in the current command. (UISN-40)
+Information: Performing leakage power optimization. (PWR-850)
+CPU Load: 3%, Ram Free: 2 GB, Swap Free: 15 GB, Work Disk Free: 83 GB, Tmp Disk Free: 245 GB
+Alib files are up-to-date.
+Information: Running optimization using a maximum of 4 cores. (OPT-1500)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | V-2023.12-DWBB_202312.0 |     *     |
+| Licensed DW Building Blocks        | V-2023.12-DWBB_202312.0 |     *     |
+============================================================================
+
+====================================================================================================
+| Flow Information                                                                                 |
+----------------------------------------------------------------------------------------------------
+| Flow         | Design Compiler WLM                                                               |
+| Command Line | compile_ultra                                                                     |
+====================================================================================================
+| Design Information                                      | Value                                  |
+====================================================================================================
+| Number of Scenarios                                     | 0                                      |
+| Leaf Cell Count                                         | 47                                     |
+| Number of User Hierarchies                              | 2                                      |
+| Sequential Cell Count                                   | 22                                     |
+| Macro Count                                             | 0                                      |
+| Number of Power Domains                                 | 0                                      |
+| Number of Path Groups                                   | 2                                      |
+| Number of VT Class                                      | 1                                      |
+| Number of Clocks                                        | 1                                      |
+| Number of Dont Touch Cells                              | 0                                      |
+| Number of Dont Touch Nets                               | 0                                      |
+| Number of Size Only Cells                               | 0                                      |
+| Design with UPF Data                                    | false                                  |
+====================================================================================================
+Information: Sequential output inversion is enabled.  SVF file must be used for formal verification. (OPT-1208)
+
+Information: There are 12 potential problems in your design. Please run 'check_design' for more information. (LINT-99)
+
+  Simplifying Design 'sar_dbe_ADC_RESOLUTION10'
+
+Loaded alib file './alib-52/saed90nm_max_htm_lvt.db.alib'
+  Building model 'DW01_NAND2'
+Information: Changed minimum wire load model for 'DW01_NAND2' from 'ForQA' to 'ForQA'. (OPT-171)
+Information: Changed minimum wire load model for 'set_propagator_ADC_RESOLUTION10' from 'ForQA' to 'ForQA'. (OPT-171)
+Information: Changed minimum wire load model for 'custom_sar_reg_ADC_RESOLUTION10' from 'ForQA' to 'ForQA'. (OPT-171)
+Information: Changed minimum wire load model for 'sar_dbe_ADC_RESOLUTION10' from '8000' to '8000'. (OPT-171)
+Information: Ungrouping hierarchy U_ctrl_logic before Pass 1 (OPT-776)
+Information: Ungrouping hierarchy u_SET_PROP before Pass 1 (OPT-776)
+Information: Ungrouping 2 of 3 hierarchies before Pass 1 (OPT-775)
+CPU Load: 4%, Ram Free: 2 GB, Swap Free: 15 GB, Work Disk Free: 83 GB, Tmp Disk Free: 245 GB
+Information: State dependent leakage is now switched from on to off.
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'sar_dbe_ADC_RESOLUTION10'
+CPU Load: 4%, Ram Free: 2 GB, Swap Free: 15 GB, Work Disk Free: 83 GB, Tmp Disk Free: 245 GB
+
+  Updating timing information
+Information: Changed minimum wire load model for 'sar_dbe_ADC_RESOLUTION10' from '8000' to '8000'. (OPT-171)
+Information: Updating design information... (UID-85)
+
+Threshold voltage group cell usage:
+>> saed90cell_lvt 100.00%
+
+  Beginning Mapping Optimizations  (Ultra High effort)
+  -------------------------------
+Information: Changed minimum wire load model for 'sar_dbe_ADC_RESOLUTION10' from '8000' to '8000'. (OPT-171)
+Information: There is no timing violation in design sar_dbe_ADC_RESOLUTION10. Delay-based auto_ungroup will not be performed. (OPT-780)
+Information: Changed minimum wire load model for 'sar_dbe_ADC_RESOLUTION10' from '8000' to '8000'. (OPT-171)
+Information: Changed minimum wire load model for 'sar_dbe_ADC_RESOLUTION10' from '8000' to '8000'. (OPT-171)
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:01     920.7      0.06       0.4       0.0                           20373672.0000
+    0:00:01     920.7      0.06       0.4       0.0                           20373672.0000
+
+Threshold voltage group cell usage:
+>> saed90cell_lvt 100.00%
+
+  Beginning Constant Register Removal
+  -----------------------------------
+    0:00:01     920.7      0.06       0.4       0.0                           20373672.0000
+    0:00:01     920.7      0.06       0.4       0.0                           20373672.0000
+
+Threshold voltage group cell usage:
+>> saed90cell_lvt 100.00%
+
+  Beginning Global Optimizations
+  ------------------------------
+  Numerical Synthesis (Phase 1)
+  Numerical Synthesis (Phase 2)
+  Global Optimization (Phase 1)
+  Global Optimization (Phase 2)
+  Global Optimization (Phase 3)
+  Global Optimization (Phase 4)
+  Global Optimization (Phase 5)
+Information: Changed minimum wire load model for 'sar_dbe_ADC_RESOLUTION10' from '8000' to '8000'. (OPT-171)
+  Global Optimization (Phase 6)
+  Global Optimization (Phase 7)
+  Global Optimization (Phase 8)
+  Global Optimization (Phase 9)
+  Global Optimization (Phase 10)
+  Global Optimization (Phase 11)
+  Global Optimization (Phase 12)
+  Global Optimization (Phase 13)
+Information: Changed minimum wire load model for 'sar_dbe_ADC_RESOLUTION10' from '8000' to '8000'. (OPT-171)
+  Global Optimization (Phase 14)
+  Global Optimization (Phase 15)
+  Global Optimization (Phase 16)
+  Global Optimization (Phase 17)
+  Global Optimization (Phase 18)
+Information: Changed minimum wire load model for 'sar_dbe_ADC_RESOLUTION10' from '8000' to '8000'. (OPT-171)
+  Global Optimization (Phase 19)
+Information: Changed minimum wire load model for 'sar_dbe_ADC_RESOLUTION10' from '8000' to '8000'. (OPT-171)
+  Global Optimization (Phase 20)
+  Global Optimization (Phase 21)
+  Global Optimization (Phase 22)
+  Global Optimization (Phase 23)
+  Global Optimization (Phase 24)
+  Global Optimization (Phase 25)
+  Global Optimization (Phase 26)
+  Global Optimization (Phase 27)
+  Global Optimization (Phase 28)
+  Global Optimization (Phase 29)
+  Global Optimization (Phase 30)
+
+Threshold voltage group cell usage:
+>> saed90cell_lvt 100.00%
+
+  Beginning Isolate Ports
+  -----------------------
+
+Threshold voltage group cell usage:
+>> saed90cell_lvt 100.00%
+
+  Beginning Delay Optimization
+  ----------------------------
+    0:00:01     822.1      0.00       0.0       0.0                           17243630.0000
+    0:00:01     822.1      0.00       0.0       0.0                           17243630.0000
+    0:00:01     822.1      0.00       0.0       0.0                           17243630.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+
+Threshold voltage group cell usage:
+>> saed90cell_lvt 100.00%
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+
+  Beginning WLM Backend Optimization
+  --------------------------------------
+Information: Changed minimum wire load model for 'sar_dbe_ADC_RESOLUTION10' from '8000' to '8000'. (OPT-171)
+Information: Changed minimum wire load model for 'sar_dbe_ADC_RESOLUTION10' from '8000' to '8000'. (OPT-171)
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+
+Threshold voltage group cell usage:
+>> saed90cell_lvt 100.00%
+
+
+  Beginning Leakage Power Optimization  (max_leakage_power 0)
+  ------------------------------------
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+
+                                  TOTAL                                                
+   ELAPSED            WORST NEG   SETUP    DESIGN                              LEAKAGE 
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT            POWER  
+  --------- --------- --------- --------- --------- ------------------------- ---------
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+    0:00:01     805.5      0.00       0.0       0.0                           14540820.0000
+CPU Load: 4%, Ram Free: 1 GB, Swap Free: 15 GB, Work Disk Free: 83 GB, Tmp Disk Free: 245 GB
+Loading db file '/eda/synopsys/SAED90_EDK/SAED_EDK90nm/Digital_Standard_cell_Library/synopsys/models/saed90nm_min_ltl_lvt.db'
+Loading db file '/eda/synopsys/SAED90_EDK/SAED_EDK90nm_IO/IO_Standard_Cell_Library/synopsys/models/saed90nm_io_min.db'
+Loading db file '/eda/synopsys/SAED90_EDK/SAED_EDK90nm/Digital_Standard_cell_Library/synopsys/models/saed90nm_max_htm_lvt.db'
+Loading db file '/eda/synopsys/SAED90_EDK/SAED_EDK90nm_IO/IO_Standard_Cell_Library/synopsys/models/saed90nm_io_max.db'
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios 
+
+
+  Optimization Complete
+  ---------------------
+Information: State dependent leakage is now switched from off to on.
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+CPU Load: 4%, Ram Free: 1 GB, Swap Free: 15 GB, Work Disk Free: 83 GB, Tmp Disk Free: 245 GB
+Information: Total number of MV cells in the design.
+----------------------------------------------------------------------------------------------------
+ MV Cells                                           Total Number                                   
+----------------------------------------------------------------------------------------------------
+ Level Shifter:                                     0                                             
+ Enable Level Shifter:                              0                                             
+ Isolation Cell:                                    0                                             
+ Retention Cell:                                    0                                             
+ Retention Clamp Cell:                              0                                             
+ Switch Cell:                                       0                                             
+ Always-On Cell:                                    0                                             
+ Repeater Cell:                                     0                                             
+
+----------------------------------------------------------------------------------------------------
+Unmapped MV Cells 
+----------------------------------------------------------------------------------------------------
+0 Isolation Cells are unmapped 
+0 Retention Clamp Cells are unmapped 
+----------------------------------------------------------------------------------------------------
+1
+define_name_rules no_case -case_insensitive
+1
+change_names -rule no_case -hierarchy
+1
+change_names -rule verilog -hierarchy
+1
+set verilogout_no_tri true
+true
+set verilogout_equation false
+false
+write_file -format verilog -output $TOP_MODULE.v
+Writing verilog file '/home/vlsi/Desktop/asic_final/impl/synth/sar_dbe.v'.
+1
+write_file -hierarchy -format ddc -output $TOP_MODULE.ddc
+Writing ddc file 'sar_dbe.ddc'.
+1
+# Reporting...
+report_area > $REPORT_DIR/area.rpt
+report_cell > $REPORT_DIR/cell.rpt
+report_clock > $REPORT_DIR/clock.rpt
+report_design > $REPORT_DIR/design.rpt
+report_hierarchy > $REPORT_DIR/hierarchy.rpt
+report_power > $REPORT_DIR/pwr.rpr
+report_qor > $REPORT_DIR/qor.rpt
+report_timing -max_paths 100 -delay_type min > $REPORT_DIR/hold.rpt
+report_timing -max_paths 100 -delay_type max > $REPORT_DIR/setup.rpt
+report_constraint -all_violators -verbose > $REPORT_DIR/viol.rpt
+exit
+
+Memory usage for this session 178 Mbytes.
+Memory usage for this session including child processes 604 Mbytes.
+CPU usage for this session 3 seconds ( 0.00 hours ).
+Elapsed time for this session 4 seconds ( 0.00 hours ).
+
+Thank you...

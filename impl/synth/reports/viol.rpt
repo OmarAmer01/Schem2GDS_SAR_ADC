@@ -1,0 +1,13 @@
+ 
+****************************************
+Report : constraint
+        -all_violators
+        -verbose
+Design : sar_dbe_ADC_RESOLUTION10
+Version: V-2023.12
+Date   : Fri May 10 17:39:29 2024
+****************************************
+
+This design has no violated constraints.
+
+1

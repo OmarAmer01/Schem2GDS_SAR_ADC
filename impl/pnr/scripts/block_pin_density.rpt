@@ -1,0 +1,270 @@
+
+Physical Block = sar_dbe_ADC_RESOLUTION10
+Edge Number    = 1
+Coordinates    = {0.000 0.000} , {0.000 8.640} 
+Layer     Available-Slots     Number of Pins     Pin-Density
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+M1         27                  0                  0.000
+M2         0                   0                  0.000
+M3         13                  1                  0.077
+M4         0                   0                  0.000
+M5         6                   0                  0.000
+M6         0                   0                  0.000
+M7         3                   0                  0.000
+M8         0                   0                  0.000
+M9         2                   0                  0.000
+
+Physical Block = sar_dbe_ADC_RESOLUTION10
+Edge Number    = 1
+Coordinates    = {0.000 8.640} , {0.000 17.280} 
+Layer     Available-Slots     Number of Pins     Pin-Density
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+M1         27                  0                  0.000
+M2         0                   0                  0.000
+M3         14                  1                  0.071
+M4         0                   0                  0.000
+M5         7                   0                  0.000
+M6         0                   0                  0.000
+M7         4                   0                  0.000
+M8         0                   0                  0.000
+M9         2                   0                  0.000
+
+Physical Block = sar_dbe_ADC_RESOLUTION10
+Edge Number    = 1
+Coordinates    = {0.000 17.280} , {0.000 25.920} 
+Layer     Available-Slots     Number of Pins     Pin-Density
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+M1         27                  0                  0.000
+M2         0                   0                  0.000
+M3         13                  1                  0.077
+M4         0                   0                  0.000
+M5         7                   0                  0.000
+M6         0                   0                  0.000
+M7         3                   0                  0.000
+M8         0                   0                  0.000
+M9         1                   0                  0.000
+
+Physical Block = sar_dbe_ADC_RESOLUTION10
+Edge Number    = 1
+Coordinates    = {0.000 25.920} , {0.000 33.680} 
+Layer     Available-Slots     Number of Pins     Pin-Density
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+M1         25                  0                  0.000
+M2         0                   0                  0.000
+M3         13                  0                  0.000
+M4         0                   0                  0.000
+M5         6                   0                  0.000
+M6         0                   0                  0.000
+M7         3                   0                  0.000
+M8         0                   0                  0.000
+M9         2                   0                  0.000
+
+Physical Block = sar_dbe_ADC_RESOLUTION10
+Edge Number    = 2
+Coordinates    = {0.000 33.680} , {8.640 33.680} 
+Layer     Available-Slots     Number of Pins     Pin-Density
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+M1         0                   0                  0.000
+M2         27                  1                  0.037
+M3         0                   0                  0.000
+M4         13                  0                  0.000
+M5         0                   0                  0.000
+M6         6                   0                  0.000
+M7         0                   0                  0.000
+M8         2                   0                  0.000
+M9         0                   0                  0.000
+
+Physical Block = sar_dbe_ADC_RESOLUTION10
+Edge Number    = 2
+Coordinates    = {8.640 33.680} , {17.280 33.680} 
+Layer     Available-Slots     Number of Pins     Pin-Density
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+M1         0                   0                  0.000
+M2         27                  1                  0.037
+M3         0                   0                  0.000
+M4         14                  0                  0.000
+M5         0                   0                  0.000
+M6         7                   0                  0.000
+M7         0                   0                  0.000
+M8         3                   1                  0.333
+M9         0                   0                  0.000
+
+Physical Block = sar_dbe_ADC_RESOLUTION10
+Edge Number    = 2
+Coordinates    = {17.280 33.680} , {25.920 33.680} 
+Layer     Available-Slots     Number of Pins     Pin-Density
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+M1         0                   0                  0.000
+M2         26                  1                  0.038
+M3         0                   0                  0.000
+M4         13                  0                  0.000
+M5         0                   0                  0.000
+M6         7                   0                  0.000
+M7         0                   0                  0.000
+M8         2                   1                  0.500
+M9         0                   0                  0.000
+
+Physical Block = sar_dbe_ADC_RESOLUTION10
+Edge Number    = 2
+Coordinates    = {25.920 33.680} , {34.560 33.680} 
+Layer     Available-Slots     Number of Pins     Pin-Density
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+M1         0                   0                  0.000
+M2         27                  1                  0.037
+M3         0                   0                  0.000
+M4         14                  0                  0.000
+M5         0                   0                  0.000
+M6         7                   0                  0.000
+M7         0                   0                  0.000
+M8         2                   1                  0.500
+M9         0                   0                  0.000
+
+Physical Block = sar_dbe_ADC_RESOLUTION10
+Edge Number    = 2
+Coordinates    = {34.560 33.680} , {35.920 33.680} 
+Layer     Available-Slots     Number of Pins     Pin-Density
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+M1         0                   0                  0.000
+M2         5                   0                  0.000
+M3         0                   0                  0.000
+M4         2                   0                  0.000
+M5         0                   0                  0.000
+M6         1                   0                  0.000
+M7         0                   0                  0.000
+M8         1                   0                  0.000
+M9         0                   0                  0.000
+
+Physical Block = sar_dbe_ADC_RESOLUTION10
+Edge Number    = 3
+Coordinates    = {35.920 0.000} , {35.920 8.640} 
+Layer     Available-Slots     Number of Pins     Pin-Density
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+M1         27                  0                  0.000
+M2         0                   0                  0.000
+M3         12                  1                  0.083
+M4         0                   0                  0.000
+M5         6                   0                  0.000
+M6         0                   0                  0.000
+M7         3                   0                  0.000
+M8         0                   0                  0.000
+M9         2                   0                  0.000
+
+Physical Block = sar_dbe_ADC_RESOLUTION10
+Edge Number    = 3
+Coordinates    = {35.920 8.640} , {35.920 17.280} 
+Layer     Available-Slots     Number of Pins     Pin-Density
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+M1         27                  0                  0.000
+M2         0                   0                  0.000
+M3         13                  1                  0.077
+M4         0                   0                  0.000
+M5         7                   0                  0.000
+M6         0                   0                  0.000
+M7         4                   0                  0.000
+M8         0                   0                  0.000
+M9         2                   0                  0.000
+
+Physical Block = sar_dbe_ADC_RESOLUTION10
+Edge Number    = 3
+Coordinates    = {35.920 17.280} , {35.920 25.920} 
+Layer     Available-Slots     Number of Pins     Pin-Density
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+M1         27                  0                  0.000
+M2         0                   0                  0.000
+M3         12                  1                  0.083
+M4         0                   0                  0.000
+M5         7                   0                  0.000
+M6         0                   0                  0.000
+M7         3                   0                  0.000
+M8         0                   0                  0.000
+M9         1                   0                  0.000
+
+Physical Block = sar_dbe_ADC_RESOLUTION10
+Edge Number    = 3
+Coordinates    = {35.920 25.920} , {35.920 33.680} 
+Layer     Available-Slots     Number of Pins     Pin-Density
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+M1         25                  0                  0.000
+M2         0                   0                  0.000
+M3         13                  0                  0.000
+M4         0                   0                  0.000
+M5         6                   0                  0.000
+M6         0                   0                  0.000
+M7         3                   0                  0.000
+M8         0                   0                  0.000
+M9         2                   0                  0.000
+
+Physical Block = sar_dbe_ADC_RESOLUTION10
+Edge Number    = 4
+Coordinates    = {0.000 0.000} , {8.640 0.000} 
+Layer     Available-Slots     Number of Pins     Pin-Density
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+M1         0                   0                  0.000
+M2         27                  1                  0.037
+M3         0                   0                  0.000
+M4         13                  0                  0.000
+M5         0                   0                  0.000
+M6         6                   0                  0.000
+M7         0                   0                  0.000
+M8         2                   0                  0.000
+M9         0                   0                  0.000
+
+Physical Block = sar_dbe_ADC_RESOLUTION10
+Edge Number    = 4
+Coordinates    = {8.640 0.000} , {17.280 0.000} 
+Layer     Available-Slots     Number of Pins     Pin-Density
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+M1         0                   0                  0.000
+M2         26                  1                  0.038
+M3         0                   0                  0.000
+M4         14                  0                  0.000
+M5         0                   0                  0.000
+M6         7                   0                  0.000
+M7         0                   0                  0.000
+M8         3                   1                  0.333
+M9         0                   0                  0.000
+
+Physical Block = sar_dbe_ADC_RESOLUTION10
+Edge Number    = 4
+Coordinates    = {17.280 0.000} , {25.920 0.000} 
+Layer     Available-Slots     Number of Pins     Pin-Density
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+M1         0                   0                  0.000
+M2         26                  1                  0.038
+M3         0                   0                  0.000
+M4         13                  0                  0.000
+M5         0                   0                  0.000
+M6         7                   0                  0.000
+M7         0                   0                  0.000
+M8         2                   1                  0.500
+M9         0                   0                  0.000
+
+Physical Block = sar_dbe_ADC_RESOLUTION10
+Edge Number    = 4
+Coordinates    = {25.920 0.000} , {34.560 0.000} 
+Layer     Available-Slots     Number of Pins     Pin-Density
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+M1         0                   0                  0.000
+M2         27                  1                  0.037
+M3         0                   0                  0.000
+M4         14                  0                  0.000
+M5         0                   0                  0.000
+M6         7                   0                  0.000
+M7         0                   0                  0.000
+M8         2                   1                  0.500
+M9         0                   0                  0.000
+
+Physical Block = sar_dbe_ADC_RESOLUTION10
+Edge Number    = 4
+Coordinates    = {34.560 0.000} , {35.920 0.000} 
+Layer     Available-Slots     Number of Pins     Pin-Density
+=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+M1         0                   0                  0.000
+M2         5                   0                  0.000
+M3         0                   0                  0.000
+M4         2                   0                  0.000
+M5         0                   0                  0.000
+M6         1                   0                  0.000
+M7         0                   0                  0.000
+M8         1                   0                  0.000
+M9         0                   0                  0.000

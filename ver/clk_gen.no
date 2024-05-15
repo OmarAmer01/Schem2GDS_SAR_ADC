@@ -1,0 +1,13 @@
+/*
+==============================================
+* Generates the clock for the testbench.
+
+*   Date: 4/25/24
+==============================================
+*/
+
+`timescale 1ns/1ps
+module clk_gen#(parameter int PERIOD = 100)(inout i_clk);
+    initial i_clk = 0;
+    always #(PERIOD/2) i_clk = ~i_clk;
+endmodule

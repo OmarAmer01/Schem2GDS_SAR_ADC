@@ -1,0 +1,388 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 100
+Design : sar_dbe_ADC_RESOLUTION10
+Version: V-2023.12
+Date   : Fri May 10 17:39:29 2024
+****************************************
+
+Operating Conditions: WORST   Library: saed90nm_max_htm_lvt
+Wire Load Model Mode: enclosed
+
+  Startpoint: u_SET_PROP_q_reg_10_/CLK
+              (internal path startpoint clocked by i_clk)
+  Endpoint: u_SET_PROP_q_reg_9_
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sar_dbe_ADC_RESOLUTION10
+                     8000                  saed90nm_max_htm_lvt
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.18       0.18
+  input external delay                                    0.00       0.18 r
+  u_SET_PROP_q_reg_10_/CLK (DFFASX1_LVT)                  0.00       0.18 r
+  u_SET_PROP_q_reg_10_/Q (DFFASX1_LVT)                    0.45       0.63 r
+  u_SET_PROP_q_reg_9_/D (DFFARX1_LVT)                     0.04       0.67 r
+  data arrival time                                                  0.67
+
+  clock i_clk (rise edge)                                 0.91       0.91
+  clock network delay (ideal)                             0.18       1.09
+  clock uncertainty                                      -0.09       1.00
+  u_SET_PROP_q_reg_9_/CLK (DFFARX1_LVT)                   0.00       1.00 r
+  library setup time                                     -0.24       0.76
+  data required time                                                 0.76
+  --------------------------------------------------------------------------
+  data required time                                                 0.76
+  data arrival time                                                 -0.67
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.09
+
+
+  Startpoint: u_SET_PROP_q_reg_9_
+              (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: u_SET_PROP_q_reg_8_
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sar_dbe_ADC_RESOLUTION10
+                     8000                  saed90nm_max_htm_lvt
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.18       0.18
+  u_SET_PROP_q_reg_9_/CLK (DFFARX1_LVT)                   0.00       0.18 r
+  u_SET_PROP_q_reg_9_/Q (DFFARX1_LVT)                     0.41       0.60 r
+  u_SET_PROP_q_reg_8_/D (DFFARX1_LVT)                     0.04       0.64 r
+  data arrival time                                                  0.64
+
+  clock i_clk (rise edge)                                 0.91       0.91
+  clock network delay (ideal)                             0.18       1.09
+  clock uncertainty                                      -0.09       1.00
+  u_SET_PROP_q_reg_8_/CLK (DFFARX1_LVT)                   0.00       1.00 r
+  library setup time                                     -0.24       0.76
+  data required time                                                 0.76
+  --------------------------------------------------------------------------
+  data required time                                                 0.76
+  data arrival time                                                 -0.64
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.13
+
+
+  Startpoint: u_SET_PROP_q_reg_8_
+              (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: u_SET_PROP_q_reg_7_
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sar_dbe_ADC_RESOLUTION10
+                     8000                  saed90nm_max_htm_lvt
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.18       0.18
+  u_SET_PROP_q_reg_8_/CLK (DFFARX1_LVT)                   0.00       0.18 r
+  u_SET_PROP_q_reg_8_/Q (DFFARX1_LVT)                     0.41       0.60 r
+  u_SET_PROP_q_reg_7_/D (DFFARX1_LVT)                     0.04       0.64 r
+  data arrival time                                                  0.64
+
+  clock i_clk (rise edge)                                 0.91       0.91
+  clock network delay (ideal)                             0.18       1.09
+  clock uncertainty                                      -0.09       1.00
+  u_SET_PROP_q_reg_7_/CLK (DFFARX1_LVT)                   0.00       1.00 r
+  library setup time                                     -0.24       0.76
+  data required time                                                 0.76
+  --------------------------------------------------------------------------
+  data required time                                                 0.76
+  data arrival time                                                 -0.64
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.13
+
+
+  Startpoint: u_SET_PROP_q_reg_7_
+              (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: u_SET_PROP_q_reg_6_
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sar_dbe_ADC_RESOLUTION10
+                     8000                  saed90nm_max_htm_lvt
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.18       0.18
+  u_SET_PROP_q_reg_7_/CLK (DFFARX1_LVT)                   0.00       0.18 r
+  u_SET_PROP_q_reg_7_/Q (DFFARX1_LVT)                     0.41       0.60 r
+  u_SET_PROP_q_reg_6_/D (DFFARX1_LVT)                     0.04       0.64 r
+  data arrival time                                                  0.64
+
+  clock i_clk (rise edge)                                 0.91       0.91
+  clock network delay (ideal)                             0.18       1.09
+  clock uncertainty                                      -0.09       1.00
+  u_SET_PROP_q_reg_6_/CLK (DFFARX1_LVT)                   0.00       1.00 r
+  library setup time                                     -0.24       0.76
+  data required time                                                 0.76
+  --------------------------------------------------------------------------
+  data required time                                                 0.76
+  data arrival time                                                 -0.64
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.13
+
+
+  Startpoint: u_SET_PROP_q_reg_6_
+              (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: u_SET_PROP_q_reg_5_
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sar_dbe_ADC_RESOLUTION10
+                     8000                  saed90nm_max_htm_lvt
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.18       0.18
+  u_SET_PROP_q_reg_6_/CLK (DFFARX1_LVT)                   0.00       0.18 r
+  u_SET_PROP_q_reg_6_/Q (DFFARX1_LVT)                     0.41       0.60 r
+  u_SET_PROP_q_reg_5_/D (DFFARX1_LVT)                     0.04       0.64 r
+  data arrival time                                                  0.64
+
+  clock i_clk (rise edge)                                 0.91       0.91
+  clock network delay (ideal)                             0.18       1.09
+  clock uncertainty                                      -0.09       1.00
+  u_SET_PROP_q_reg_5_/CLK (DFFARX1_LVT)                   0.00       1.00 r
+  library setup time                                     -0.24       0.76
+  data required time                                                 0.76
+  --------------------------------------------------------------------------
+  data required time                                                 0.76
+  data arrival time                                                 -0.64
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.13
+
+
+  Startpoint: u_SET_PROP_q_reg_5_
+              (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: u_SET_PROP_q_reg_4_
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sar_dbe_ADC_RESOLUTION10
+                     8000                  saed90nm_max_htm_lvt
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.18       0.18
+  u_SET_PROP_q_reg_5_/CLK (DFFARX1_LVT)                   0.00       0.18 r
+  u_SET_PROP_q_reg_5_/Q (DFFARX1_LVT)                     0.41       0.60 r
+  u_SET_PROP_q_reg_4_/D (DFFARX1_LVT)                     0.04       0.64 r
+  data arrival time                                                  0.64
+
+  clock i_clk (rise edge)                                 0.91       0.91
+  clock network delay (ideal)                             0.18       1.09
+  clock uncertainty                                      -0.09       1.00
+  u_SET_PROP_q_reg_4_/CLK (DFFARX1_LVT)                   0.00       1.00 r
+  library setup time                                     -0.24       0.76
+  data required time                                                 0.76
+  --------------------------------------------------------------------------
+  data required time                                                 0.76
+  data arrival time                                                 -0.64
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.13
+
+
+  Startpoint: u_SET_PROP_q_reg_4_
+              (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: u_SET_PROP_q_reg_3_
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sar_dbe_ADC_RESOLUTION10
+                     8000                  saed90nm_max_htm_lvt
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.18       0.18
+  u_SET_PROP_q_reg_4_/CLK (DFFARX1_LVT)                   0.00       0.18 r
+  u_SET_PROP_q_reg_4_/Q (DFFARX1_LVT)                     0.41       0.60 r
+  u_SET_PROP_q_reg_3_/D (DFFARX1_LVT)                     0.04       0.64 r
+  data arrival time                                                  0.64
+
+  clock i_clk (rise edge)                                 0.91       0.91
+  clock network delay (ideal)                             0.18       1.09
+  clock uncertainty                                      -0.09       1.00
+  u_SET_PROP_q_reg_3_/CLK (DFFARX1_LVT)                   0.00       1.00 r
+  library setup time                                     -0.24       0.76
+  data required time                                                 0.76
+  --------------------------------------------------------------------------
+  data required time                                                 0.76
+  data arrival time                                                 -0.64
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.13
+
+
+  Startpoint: u_SET_PROP_q_reg_3_
+              (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: u_SET_PROP_q_reg_2_
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sar_dbe_ADC_RESOLUTION10
+                     8000                  saed90nm_max_htm_lvt
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.18       0.18
+  u_SET_PROP_q_reg_3_/CLK (DFFARX1_LVT)                   0.00       0.18 r
+  u_SET_PROP_q_reg_3_/Q (DFFARX1_LVT)                     0.41       0.60 r
+  u_SET_PROP_q_reg_2_/D (DFFARX1_LVT)                     0.04       0.64 r
+  data arrival time                                                  0.64
+
+  clock i_clk (rise edge)                                 0.91       0.91
+  clock network delay (ideal)                             0.18       1.09
+  clock uncertainty                                      -0.09       1.00
+  u_SET_PROP_q_reg_2_/CLK (DFFARX1_LVT)                   0.00       1.00 r
+  library setup time                                     -0.24       0.76
+  data required time                                                 0.76
+  --------------------------------------------------------------------------
+  data required time                                                 0.76
+  data arrival time                                                 -0.64
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.13
+
+
+  Startpoint: u_SET_PROP_q_reg_2_
+              (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: u_SET_PROP_q_reg_1_
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sar_dbe_ADC_RESOLUTION10
+                     8000                  saed90nm_max_htm_lvt
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.18       0.18
+  u_SET_PROP_q_reg_2_/CLK (DFFARX1_LVT)                   0.00       0.18 r
+  u_SET_PROP_q_reg_2_/Q (DFFARX1_LVT)                     0.41       0.60 r
+  u_SET_PROP_q_reg_1_/D (DFFARX1_LVT)                     0.04       0.64 r
+  data arrival time                                                  0.64
+
+  clock i_clk (rise edge)                                 0.91       0.91
+  clock network delay (ideal)                             0.18       1.09
+  clock uncertainty                                      -0.09       1.00
+  u_SET_PROP_q_reg_1_/CLK (DFFARX1_LVT)                   0.00       1.00 r
+  library setup time                                     -0.24       0.76
+  data required time                                                 0.76
+  --------------------------------------------------------------------------
+  data required time                                                 0.76
+  data arrival time                                                 -0.64
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.13
+
+
+  Startpoint: u_SET_PROP_q_reg_1_
+              (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: u_SET_PROP_q_reg_0_
+            (rising edge-triggered flip-flop clocked by i_clk)
+  Path Group: i_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sar_dbe_ADC_RESOLUTION10
+                     8000                  saed90nm_max_htm_lvt
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.18       0.18
+  u_SET_PROP_q_reg_1_/CLK (DFFARX1_LVT)                   0.00       0.18 r
+  u_SET_PROP_q_reg_1_/Q (DFFARX1_LVT)                     0.41       0.60 r
+  u_SET_PROP_q_reg_0_/D (DFFARX1_LVT)                     0.04       0.64 r
+  data arrival time                                                  0.64
+
+  clock i_clk (rise edge)                                 0.91       0.91
+  clock network delay (ideal)                             0.18       1.09
+  clock uncertainty                                      -0.09       1.00
+  u_SET_PROP_q_reg_0_/CLK (DFFARX1_LVT)                   0.00       1.00 r
+  library setup time                                     -0.24       0.76
+  data required time                                                 0.76
+  --------------------------------------------------------------------------
+  data required time                                                 0.76
+  data arrival time                                                 -0.64
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.13
+
+
+  Startpoint: u_SET_PROP_q_reg_0_
+              (rising edge-triggered flip-flop clocked by i_clk)
+  Endpoint: intf_o_eoc (output port clocked by i_clk)
+  Path Group: i_clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  sar_dbe_ADC_RESOLUTION10
+                     8000                  saed90nm_max_htm_lvt
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock i_clk (rise edge)                                 0.00       0.00
+  clock network delay (ideal)                             0.18       0.18
+  u_SET_PROP_q_reg_0_/CLK (DFFARX1_LVT)                   0.00       0.18 r
+  u_SET_PROP_q_reg_0_/QN (DFFARX1_LVT)                    0.30       0.49 r
+  intf_o_eoc (out)                                        0.15       0.63 r
+  data arrival time                                                  0.63
+
+  clock i_clk (rise edge)                                 0.91       0.91
+  clock network delay (ideal)                             0.18       1.09
+  clock uncertainty                                      -0.09       1.00
+  output external delay                                  -0.18       0.82
+  data required time                                                 0.82
+  --------------------------------------------------------------------------
+  data required time                                                 0.82
+  data arrival time                                                 -0.63
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.18
+
+
+1

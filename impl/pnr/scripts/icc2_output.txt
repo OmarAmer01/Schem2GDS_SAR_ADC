@@ -1,0 +1,661 @@
+ 
+                              IC Compiler II (TM)
+
+                  Version V-2023.12 for linux64 - Nov 23, 2023
+  This release has significant feature enhancements. Please review the Release
+                       Notes associated with this release.
+
+                    Copyright (c) 1988 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Error: This script has expired. Please contact Aditya/Amir/Wei-Chih.
+icc2_shell> open_block /run/media/vlsi/MALAK_AHMED/the_final_inshallah/asic_final/impl/pnr/scripts/SAR_DBE.dlib:routing.design
+Information: User units loaded from library 'saed90nm_m_lvt' (LNK-040)
+Opening block 'SAR_DBE.dlib:routing.design' in edit mode
+icc2_shell> link_block
+Using libraries: SAR_DBE.dlib saed90nm_m_lvt
+Visiting block SAR_DBE.dlib:routing.design
+Design 'sar_dbe_ADC_RESOLUTION10' was successfully linked.
+1
+icc2_shell> set_virtual_pad -net VDD -coordinate
+Error: value not specified for option '-coordinate' (CMD-008)
+icc2_shell> set_virtual_pad -net VDD -coordinates
+Error: unknown option '-coordinates' (CMD-010)
+Error: Required argument '-coordinate' was not found (CMD-007)
+icc2_shell> gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -start StretchTool
+icc2_shell> gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -reset
+set_virtual_pad -net VDD -coordinates {35.22 23.54}
+Error: unknown option '-coordinates' (CMD-010)
+Error: extra positional option '35.22 23.54' (CMD-012)
+Error: Required argument '-coordinate' was not found (CMD-007)
+Information: script '/tmp/icc2_shell-2.CRbeIe'
+                stopped at line 1 due to error. (CMD-081)
+Extended error info:
+
+    while executing
+"set_virtual_pad -net VDD -coordinates {35.22 23.54}"
+    (file "/tmp/icc2_shell-2.CRbeIe" line 1)
+ -- End Extended Error Info
+set_virtual_pad -net VDD -coordinate {35.22 23.54}
+set_virtual_pad -net VDD -coordinate {35.22 18.445}
+set_virtual_pad -net VDD -coordinate {35.22 23.54}
+Warning: unable to create the specified virutal pad. (PNA-502)
+Information: script '/tmp/icc2_shell-2.PqMewm'
+                stopped at line 5 due to error. (CMD-081)
+Extended error info:
+
+    while executing
+"set_virtual_pad -net VDD -coordinate {35.22 23.54}"
+    (file "/tmp/icc2_shell-2.PqMewm" line 5)
+ -- End Extended Error Info
+icc2_shell> set_virtual_pad -net VDD -coordinate {35.22 23.54}
+Warning: unable to create the specified virutal pad. (PNA-502)
+icc2_shell> set_virtual_pad -net VDD -coordinate {35.22 18.445}
+Warning: unable to create the specified virutal pad. (PNA-502)
+icc2_shell> analyze_power_plan -nets {VDD} -voltage 0.9 -power_budget 500
+Primary Net : VDD    Secondary Net:
+Loading cell instances...
+Number of Standard Cells: 188
+Number of Macro Cells: 0
+Number of IO Pad Cells: 0
+Loading P/G wires and vias...
+Percentage of routing tracks used by P/G nets 
+=============================================
+       layer |    Shape |  Spacing |    Total
+=============================================
+          PO |   0.000% |   0.000% |   0.000% 
+          M1 |  12.031% |   0.009% |  12.041% 
+          M2 |   1.359% |   0.419% |   1.778% 
+          M3 |   1.443% |   3.849% |   5.292% 
+          M4 |   1.263% |   0.421% |   1.684% 
+          M5 |   1.443% |   3.849% |   5.292% 
+          M6 |   1.347% |   0.505% |   1.852% 
+          M7 |   1.851% |   3.701% |   5.552% 
+          M8 |  33.333% |  11.111% |  44.444% 
+          M9 |   0.000% |   0.000% |   0.000% 
+Number of VDD Wires: 12
+Number of VDD Vias: 135
+Loading RC extraction...
+Power Supply Voltage : 0.900V
+PNA: begin analyzing net VDD...
+PNA: calculating cell instance power...
+Total Power Consumption of Net VDD : 500.000mW
+PNA: connecting instances...
+Total std cells port current : 555.556 mA
+Total hard macro port current : 0.000 mA
+PNA: loading power taps...
+Use virtual power tap at (35.220 23.540) on layer M9.
+Use virtual power tap at (35.220 18.445) on layer M9.
+PNA: constructing virtual grid...
+Total virtual grid current : 0.000 mA
+Total current: 555.556 mA
+PNA: extracting wires...
+PNA: retrieving RC values...
+PNA: simulating power network...
+Total assigned port current : 555.555 mA
+Total assigned virtual grid current : 0.000 mA
+Network information of net: VDD 
+Number of extracted resistors: 394 
+Number of all nodes: 373 
+Number of pad nodes: 2 
+Number of current sink nodes: 192 
+Number of internal nodes: 371 
+Pad (35.220 23.540) on Layer M9 Supplies 264.932 mA Current
+Pad (35.220 18.445) on Layer M9 Supplies 290.623 mA Current
+Maximum IR Drop for Net VDD: 284.670 mV at (34.760 6.760) on layer M1
+icc2_shell> set_virtual_pad -net VDD -coordinate {35.22 3.2}
+icc2_shell> analyze_power_plan -nets {VDD} -voltage 0.9 -power_budget 500
+Primary Net : VDD    Secondary Net:
+Loading cell instances...
+Number of Standard Cells: 188
+Number of Macro Cells: 0
+Number of IO Pad Cells: 0
+Loading P/G wires and vias...
+Percentage of routing tracks used by P/G nets 
+=============================================
+       layer |    Shape |  Spacing |    Total
+=============================================
+          PO |   0.000% |   0.000% |   0.000% 
+          M1 |  12.031% |   0.009% |  12.041% 
+          M2 |   1.359% |   0.419% |   1.778% 
+          M3 |   1.443% |   3.849% |   5.292% 
+          M4 |   1.263% |   0.421% |   1.684% 
+          M5 |   1.443% |   3.849% |   5.292% 
+          M6 |   1.347% |   0.505% |   1.852% 
+          M7 |   1.851% |   3.701% |   5.552% 
+          M8 |  33.333% |  11.111% |  44.444% 
+          M9 |   0.000% |   0.000% |   0.000% 
+Number of VDD Wires: 12
+Number of VDD Vias: 135
+Loading RC extraction...
+Power Supply Voltage : 0.900V
+PNA: begin analyzing net VDD...
+PNA: calculating cell instance power...
+Total Power Consumption of Net VDD : 500.000mW
+PNA: connecting instances...
+Total std cells port current : 555.556 mA
+Total hard macro port current : 0.000 mA
+PNA: loading power taps...
+Use virtual power tap at (35.220 23.540) on layer M9.
+Use virtual power tap at (35.220 18.445) on layer M9.
+Use virtual power tap at (35.220 3.200) on layer M9.
+PNA: constructing virtual grid...
+Total virtual grid current : 0.000 mA
+Total current: 555.556 mA
+PNA: extracting wires...
+PNA: retrieving RC values...
+PNA: simulating power network...
+Total assigned port current : 555.555 mA
+Total assigned virtual grid current : 0.000 mA
+Network information of net: VDD 
+Number of extracted resistors: 396 
+Number of all nodes: 375 
+Number of pad nodes: 3 
+Number of current sink nodes: 192 
+Number of internal nodes: 372 
+Pad (35.220 23.540) on Layer M9 Supplies 190.798 mA Current
+Pad (35.220 18.445) on Layer M9 Supplies 186.605 mA Current
+Pad (35.220 3.200) on Layer M9 Supplies 178.153 mA Current
+Maximum IR Drop for Net VDD: 217.186 mV at (34.760 29.800) on layer M1
+icc2_shell> create_channel_congestion_map -virtual_flat -boundary [get_attribute [current_block] boundary]
+Warning: Didn't find any enabled planning block for create_channel_congestion_map. (DPPA-268)
+icc2_shell> 
+Running global router for congestion map ...
+Info: Set app option 'route.global.deterministic' to on
+
+Start Global Route ... 
+[Init] Elapsed real time: 0:00:00 
+[Init] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[Init] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[Init] Total (MB): Used    7  Alloctr    7  Proc 6842 
+Printing options for 'route.common.*'
+common.eco_route_fix_existing_drc                       :        true                
+
+Printing options for 'route.global.*'
+global.deterministic                                    :        on                  
+global.timing_driven                                    :        false               
+
+Begin global routing.
+Warning: Ignore contact DIFFCON. (ZRT-015)
+Cell Min-Routing-Layer = M1
+Cell Max-Routing-Layer = M9
+Found antenna rule mode 4, diode mode 2:
+        layer M1:  max ratio 1000, diode ratio {0.06 0 456 43000} 
+        layer M2:  max ratio 1000, diode ratio {0.06 0 456 43000} 
+        layer M3:  max ratio 1000, diode ratio {0.06 0 456 43000} 
+        layer M4:  max ratio 1000, diode ratio {0.06 0 456 43000} 
+        layer M5:  max ratio 1000, diode ratio {0.06 0 456 43000} 
+        layer M6:  max ratio 1000, diode ratio {0.06 0 456 43000} 
+        layer M7:  max ratio 1000, diode ratio {0.06 0 456 43000} 
+        layer M8:  max ratio 1000, diode ratio {0.06 0 456 43000} 
+        layer M9:  max ratio 1000, diode ratio {0.06 0 8000 50000} 
+        layer CO: , diode ratio {0 0 1 0 0} 
+        layer VIA1:  max ratio 20, diode ratio {0.06 0 210 900} 
+        layer VIA2:  max ratio 20, diode ratio {0.06 0 210 900} 
+        layer VIA3:  max ratio 20, diode ratio {0.06 0 210 900} 
+        layer VIA4:  max ratio 20, diode ratio {0.06 0 210 900} 
+        layer VIA5:  max ratio 20, diode ratio {0.06 0 210 900} 
+        layer VIA6:  max ratio 20, diode ratio {0.06 0 210 900} 
+        layer VIA7:  max ratio 20, diode ratio {0.06 0 210 900} 
+        layer VIA8:  max ratio 20, diode ratio {0.06 0 210 900} 
+Information: Option route.detail.force_end_on_preferred_grid will be ignored since none of the layers have preferred grid. (ZRT-703)
+Info: number of net_type_blockage: 0 
+Information: Via ladder engine would be activated for pattern must join connection in certain commands. Please refer to man-page for the command list. (ZRT-619)
+Via on layer (VIA1) needs more than one tracks
+Warning: Layer M1 default pitch 0.320 may be too small to handle up/down via. Note, that minimum requirements are "wire/via-down 0.315" & "wire/via-up 0.330". (ZRT-026)
+Via on layer (VIA1) needs more than one tracks
+Warning: Layer M2 default pitch 0.320 may be too small to handle up/down via. Note, that minimum requirements are "wire/via-down 0.360" & "wire/via-up 0.320". (ZRT-026)
+Information: When applicable Min-max layer allow_pin_connection mode will allow paths of length 7.50 outside the layer range. (ZRT-707)
+Information: When applicable Min-max layer allow_pin_connection mode will allow paths of length 7.50 outside the layer range on clock nets. (ZRT-718)
+Information: When applicable layer based tapering will taper up to 0.00 in distance from the pin. (ZRT-706)
+Current Stage stats:
+[End of Read DB] Elapsed real time: 0:00:00 
+[End of Read DB] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Read DB] Stage (MB): Used   16  Alloctr   16  Proc    0 
+[End of Read DB] Total (MB): Used   23  Alloctr   24  Proc 6842 
+Constructing data structure ...
+Design statistics:
+Design Bounding Box (0.00um,0.00um,35.92um,33.68um)
+Number of routing layers = 9
+layer M1, dir Hor, min width = 0.14um, min space = 0.14um pitch = 0.32um
+layer M2, dir Ver, min width = 0.16um, min space = 0.16um pitch = 0.32um
+layer M3, dir Hor, min width = 0.16um, min space = 0.16um pitch = 0.64um
+layer M4, dir Ver, min width = 0.16um, min space = 0.16um pitch = 0.64um
+layer M5, dir Hor, min width = 0.16um, min space = 0.16um pitch = 1.28um
+layer M6, dir Ver, min width = 0.16um, min space = 0.16um pitch = 1.28um
+layer M7, dir Hor, min width = 0.16um, min space = 0.16um pitch = 2.56um
+layer M8, dir Ver, min width = 0.16um, min space = 0.16um pitch = 3.84um
+layer M9, dir Hor, min width = 0.45um, min space = 0.45um pitch = 5.12um
+Current Stage stats:
+[End of Build Tech Data] Elapsed real time: 0:00:00 
+[End of Build Tech Data] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build Tech Data] Stage (MB): Used    1  Alloctr    1  Proc    0 
+[End of Build Tech Data] Total (MB): Used   25  Alloctr   25  Proc 6842 
+Net statistics:
+Total number of nets     = 49
+Number of nets to route  = 0
+Number of nets with max-layer-mode hard = 1
+49 nets are fully connected,
+ of which 49 are detail routed and 0 are global routed.
+Net length statistics: 
+Net Count(Ignore Fully Rted) 0, Total Half Perimeter Wire Length (HPWL) 0 microns
+HPWL   0 ~   50 microns: Net Count        0     Total HPWL            0 microns
+HPWL  50 ~  100 microns: Net Count        0     Total HPWL            0 microns
+HPWL 100 ~  200 microns: Net Count        0     Total HPWL            0 microns
+HPWL 200 ~  300 microns: Net Count        0     Total HPWL            0 microns
+HPWL 300 ~  400 microns: Net Count        0     Total HPWL            0 microns
+HPWL 400 ~  500 microns: Net Count        0     Total HPWL            0 microns
+HPWL 500 ~  600 microns: Net Count        0     Total HPWL            0 microns
+HPWL 600 ~  700 microns: Net Count        0     Total HPWL            0 microns
+HPWL 700 ~  800 microns: Net Count        0     Total HPWL            0 microns
+HPWL 800 ~  900 microns: Net Count        0     Total HPWL            0 microns
+HPWL 900 ~ 1000 microns: Net Count        0     Total HPWL            0 microns
+HPWL     > 1000 microns: Net Count        0     Total HPWL            0 microns
+Current Stage stats:
+[End of Build All Nets] Elapsed real time: 0:00:00 
+[End of Build All Nets] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build All Nets] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Build All Nets] Total (MB): Used   25  Alloctr   25  Proc 6842 
+Number of partitions: 1 (1 x 1)
+Size of partitions: 12 gCells x 11 gCells
+Average gCell capacity  0.70     on layer (1)    M1
+Average gCell capacity  7.29     on layer (2)    M2
+Average gCell capacity  4.05     on layer (3)    M3
+Average gCell capacity  3.63     on layer (4)    M4
+Average gCell capacity  2.05     on layer (5)    M5
+Average gCell capacity  1.90     on layer (6)    M6
+Average gCell capacity  0.98     on layer (7)    M7
+Average gCell capacity  0.33     on layer (8)    M8
+Average gCell capacity  0.45     on layer (9)    M9
+Average number of tracks per gCell 9.64  on layer (1)    M1
+Average number of tracks per gCell 9.42  on layer (2)    M2
+Average number of tracks per gCell 4.91  on layer (3)    M3
+Average number of tracks per gCell 4.75  on layer (4)    M4
+Average number of tracks per gCell 2.55  on layer (5)    M5
+Average number of tracks per gCell 2.42  on layer (6)    M6
+Average number of tracks per gCell 1.36  on layer (7)    M7
+Average number of tracks per gCell 0.92  on layer (8)    M8
+Average number of tracks per gCell 0.82  on layer (9)    M9
+Number of gCells = 1188
+Current Stage stats:
+[End of Build Congestion Map] Elapsed real time: 0:00:00 
+[End of Build Congestion Map] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build Congestion Map] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Build Congestion Map] Total (MB): Used   25  Alloctr   25  Proc 6842 
+Current Stage stats:
+[End of Add Nets Demand] Elapsed real time: 0:00:00 
+[End of Add Nets Demand] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Add Nets Demand] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Add Nets Demand] Total (MB): Used   25  Alloctr   25  Proc 6842 
+Number of user frozen nets = 0
+Total stats:
+[End of Build Data] Elapsed real time: 0:00:00 
+[End of Build Data] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Build Data] Stage (MB): Used    1  Alloctr    1  Proc    0 
+[End of Build Data] Total (MB): Used   25  Alloctr   25  Proc 6842 
+Current Stage stats:
+[End of Blocked Pin Detection] Elapsed real time: 0:00:00 
+[End of Blocked Pin Detection] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Blocked Pin Detection] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Blocked Pin Detection] Total (MB): Used   25  Alloctr   25  Proc 6842 
+Information: Using 1 threads for routing. (ZRT-444)
+Information: Multiple gcell levels ON
+Information: Buffer distance is estimated to be ~2254.0000um (782 gCells)
+
+Start GR phase 0
+Number of partitions: 1 (1 x 1)
+Size of partitions: 12 gCells x 11 gCells
+[rtAllBotParts] Elapsed real time: 0:00:00 
+[rtAllBotParts] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[rtTop] Elapsed real time: 0:00:00 
+[rtTop] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+Current Stage stats:
+[End of Initial Routing] Elapsed real time: 0:00:00 
+[End of Initial Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Initial Routing] Stage (MB): Used  176  Alloctr  176  Proc  176 
+[End of Initial Routing] Total (MB): Used  201  Alloctr  201  Proc 7019 
+Initial. Routing result:
+Initial. Both Dirs: Dmd-Cap  =     0 Max = 0 GRCs =     0 (0.00%)
+Initial. H routing: Dmd-Cap  =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. V routing: Dmd-Cap  =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. Both Dirs: Overflow =     1 Max = 1 GRCs =     1 (0.38%)
+Initial. H routing: Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. V routing: Overflow =     1 Max = 1 (GRCs =  1) GRCs =     1 (0.76%)
+Initial. M1         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M2         Overflow =     1 Max = 1 (GRCs =  1) GRCs =     1 (0.76%)
+Initial. M3         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M4         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M5         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M6         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M7         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M8         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+Initial. M9         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+
+Initial. Total Wire Length = 0.00
+Initial. Layer M1 wire length = 0.00
+Initial. Layer M2 wire length = 0.00
+Initial. Layer M3 wire length = 0.00
+Initial. Layer M4 wire length = 0.00
+Initial. Layer M5 wire length = 0.00
+Initial. Layer M6 wire length = 0.00
+Initial. Layer M7 wire length = 0.00
+Initial. Layer M8 wire length = 0.00
+Initial. Layer M9 wire length = 0.00
+Initial. Total Number of Contacts = 0
+Initial. Via VIA12C count = 0
+Initial. Via VIA23C count = 0
+Initial. Via VIA34C count = 0
+Initial. Via VIA45C count = 0
+Initial. Via VIA56C count = 0
+Initial. Via VIA67C count = 0
+Initial. Via VIA78C count = 0
+Initial. Via VIA89C count = 0
+Initial. completed.
+
+Start GR phase 1
+Tue May 14 15:04:17 2024
+Number of partitions: 1 (1 x 1)
+Size of partitions: 12 gCells x 11 gCells
+[rtAllParts] Elapsed real time: 0:00:00 
+[rtAllParts] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+Current Stage stats:
+[End of Phase1 Routing] Elapsed real time: 0:00:00 
+[End of Phase1 Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Phase1 Routing] Stage (MB): Used    0  Alloctr    0  Proc    0 
+[End of Phase1 Routing] Total (MB): Used  201  Alloctr  201  Proc 7019 
+phase1. Routing result:
+phase1. Both Dirs: Dmd-Cap  =     0 Max = 0 GRCs =     0 (0.00%)
+phase1. H routing: Dmd-Cap  =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. V routing: Dmd-Cap  =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. Both Dirs: Overflow =     1 Max = 1 GRCs =     1 (0.38%)
+phase1. H routing: Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. V routing: Overflow =     1 Max = 1 (GRCs =  1) GRCs =     1 (0.76%)
+phase1. M1         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M2         Overflow =     1 Max = 1 (GRCs =  1) GRCs =     1 (0.76%)
+phase1. M3         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M4         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M5         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M6         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M7         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M8         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+phase1. M9         Overflow =     0 Max = 0 (GRCs =  0) GRCs =     0 (0.00%)
+
+phase1. Total Wire Length = 0.00
+phase1. Layer M1 wire length = 0.00
+phase1. Layer M2 wire length = 0.00
+phase1. Layer M3 wire length = 0.00
+phase1. Layer M4 wire length = 0.00
+phase1. Layer M5 wire length = 0.00
+phase1. Layer M6 wire length = 0.00
+phase1. Layer M7 wire length = 0.00
+phase1. Layer M8 wire length = 0.00
+phase1. Layer M9 wire length = 0.00
+phase1. Total Number of Contacts = 0
+phase1. Via VIA12C count = 0
+phase1. Via VIA23C count = 0
+phase1. Via VIA34C count = 0
+phase1. Via VIA45C count = 0
+phase1. Via VIA56C count = 0
+phase1. Via VIA67C count = 0
+phase1. Via VIA78C count = 0
+phase1. Via VIA89C count = 0
+phase1. completed.
+[End of Whole Chip Routing] Elapsed real time: 0:00:00 
+[End of Whole Chip Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Whole Chip Routing] Stage (MB): Used  177  Alloctr  177  Proc  176 
+[End of Whole Chip Routing] Total (MB): Used  201  Alloctr  201  Proc 7019 
+
+Congestion utilization per direction:
+Average vertical track utilization   = 15.21 %
+Peak    vertical track utilization   = 61.54 %
+Average horizontal track utilization = 19.15 %
+Peak    horizontal track utilization = 50.00 %
+
+[End of Global Routing] Elapsed real time: 0:00:00 
+[End of Global Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Global Routing] Stage (MB): Used  177  Alloctr  177  Proc  176 
+[End of Global Routing] Total (MB): Used  201  Alloctr  201  Proc 7019 
+Writing out congestion map...
+Updating congestion ...
+Updating congestion ...
+[DBOUT] Elapsed real time: 0:00:00 
+[DBOUT] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[DBOUT] Stage (MB): Used  -15  Alloctr  -15  Proc    0 
+[DBOUT] Total (MB): Used   36  Alloctr   37  Proc 7019 
+[End of dbOut] Elapsed real time: 0:00:00 
+[End of dbOut] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of dbOut] Stage (MB): Used  -15  Alloctr  -15  Proc    0 
+[End of dbOut] Total (MB): Used   36  Alloctr   37  Proc 7019 
+
+****************************************
+Report : congestion
+Design : sar_dbe_ADC_RESOLUTION10
+Version: V-2023.12
+Date   : Tue May 14 15:04:17 2024
+****************************************
+
+Layer     |    overflow     |              # GRCs has
+Name      |  total  |  max  | overflow (%)      | max overflow
+---------------------------------------------------------------
+Both Dirs |       1 |     1 |       1  ( 0.38%) |       1
+H routing |       0 |     0 |       0  ( 0.00%) |       0
+V routing |       1 |     1 |       1  ( 0.76%) |       1
+
+Warning: Didn't find any enabled planning block for check_pin_placement. (DPPA-268)
+0 total number of pre-routes loaded
+0 total number of vias loaded
+0 total number of edges loaded
+----------------------- Start Of Missing Pin Check ------------------------
+------------------------ End Of Missing Pin Check -------------------------
+
+-------------------- Start Of Technology Spacing Check --------------------
+--------------------- End Of Technology Spacing Check ---------------------
+
+------------------------ Start Of Pin Short Check -------------------------
+------------------------- End Of Pin Short Check --------------------------
+
+Warning: User provided window length is too small. (DPPA-470)
+Information: Using window length 8.64 microns for pin density computation. (DPPA-471)
+No violation has been found
+***Summary***
+---------------------------------------------------------------------------
+Type of Violation        |                                            Count
+-------------------------+-------------------------------------------------
+Missing Pins             |                                               0
+Pin Short                |                                               0
+Technology Spacing       |                                               0
+-------------------------+-------------------------------------------------
+Total Violations         |                                               0
+---------------------------------------------------------------------------
+Information: Starting 'update_timing' (FLW-8000)
+Information: Time: 2024-05-14 15:07:12 / Session:  00:14:08 / Command:  00:00:00 / CPU:  00:00:00 / Memory: 748 MB (FLW-8100)
+Information: The command 'update_timing' cleared the undo history. (UNDO-016)
+Information: Timer using 1 threads
+Warning: Corner default:  0 process number, 0 process label, 0 voltage, and 1 temperature mismatches. (PVT-030)
+Warning: 34 cells affected for early, 0 for late. (PVT-031)
+Warning: 1 port driving_cells affected for early, 0 for late. (PVT-034)
+Information: The stitching and editing of coupling caps is turned OFF for design 'SAR_DBE.dlib:routing.design'. (TIM-125)
+Information: Design routing has 49 nets, 0 global routed, 47 detail routed. (NEX-024)
+Information: The RC mode used is DR for design 'sar_dbe_ADC_RESOLUTION10'. (NEX-022)
+---extraction options---
+Corner: default
+ late_cap_scale                : 1
+ late_res_scale                : 1
+ early_cap_scale               : 1
+ early_res_scale               : 1
+Global options:
+ reference_direction       : use_from_tluplus
+ real_metalfill_extraction : none
+ virtual_shield_extraction : true
+---app options---
+ host.max_cores                   : 1
+ extract.connect_open           : true
+ extract.enable_coupling_cap    : false
+Extracting design: routing 
+Information: coupling capacitance is lumped to ground. (NEX-030)
+Information: 47 nets are successfully extracted. (NEX-028)
+Warning: Advanced receiver model has not been enabled for detailed routed design. (TIM-204)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 47, routed nets = 47, across physical hierarchy nets = 0, parasitics cached nets = 47, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+************************************************************
+Timer Settings:
+Delay Calculation Style:                   auto
+Signal Integrity Analysis:                 disabled
+Timing Window Analysis:                    disabled
+Advanced Waveform Propagation:             disabled
+Variation Type:                            fixed_derate
+Clock Reconvergence Pessimism Removal:     enabled
+Advanced Receiver Model:                   disabled
+LLE:                                       disabled
+ML Acceleration:                           off
+************************************************************
+Information: Ending   'update_timing' (FLW-8001)
+Information: Time: 2024-05-14 15:07:12 / Session:  00:14:08 / Command:  00:00:00 / CPU:  00:00:00 / Memory: 748 MB (FLW-8100)
+****************************************
+Report : power
+        -significant_digits 2
+Design : sar_dbe_ADC_RESOLUTION10
+Version: V-2023.12
+Date   : Tue May 14 15:07:12 2024
+****************************************
+Information: Activity propagation will be performed for scenario default.
+Information: Doing activity propagation for mode 'default' and corner 'default' with effort level 'medium'. (POW-024)
+Information: Timer-derived activity data is cached on scenario default (POW-052)
+Infomation: Fast mode activity propagation power.rtl_activity_annotation setup is ignored. Always use accurate mode.
+Information: Running switching activity propagation in scalar mode!
+
+ **** Information : No. of simulation cycles = 6 ****
+Mode: default
+Corner: default
+Scenario: default
+Voltage: 0.65
+Temperature: 125.00
+
+Voltage Unit         : 1V
+Capacitance Unit     : 1fF
+Time Unit            : 1ns
+Temperature Unit     : 1C
+Dynamic Power Unit   : 1pW
+Leakage Power Unit   : 1pW
+
+Switched supply net power scaling:
+scaling for leakage power
+
+Supply nets:
+VDD (power) probability 1.00 (default)
+VSS (ground) probability 1.00 (default)
+Warning: Power table extrapolation (extrapolation mode) for port Q on cell U_ctrl_logic_sar_reg_out_reg_0_ for parameter Cout. Lowest table value = 0.001000, highest table value = 0.208000, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port CLK on cell U_ctrl_logic_sar_reg_out_reg_1_ for parameter Tinp. Lowest table value = 0.016000, highest table value = 1.024000, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port Q on cell U_ctrl_logic_sar_reg_out_reg_1_ for parameter Tinp. Lowest table value = 0.016000, highest table value = 1.024000, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port QN on cell U_ctrl_logic_sar_reg_out_reg_1_ for parameter Tinp. Lowest table value = 0.016000, highest table value = 1.024000, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port QN on cell U_ctrl_logic_sar_reg_out_reg_1_ for parameter Cout. Lowest table value = 0.001000, highest table value = 0.208000, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port QN on cell U_ctrl_logic_sar_reg_out_reg_2_ for parameter Cout. Lowest table value = 0.001000, highest table value = 0.208000, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port QN on cell U_ctrl_logic_sar_reg_out_reg_3_ for parameter Cout. Lowest table value = 0.001000, highest table value = 0.208000, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port QN on cell U_ctrl_logic_sar_reg_out_reg_4_ for parameter Cout. Lowest table value = 0.001000, highest table value = 0.208000, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port QN on cell U_ctrl_logic_sar_reg_out_reg_5_ for parameter Cout. Lowest table value = 0.001000, highest table value = 0.208000, value = 0.000000 (POW-046)
+Warning: Power table extrapolation (extrapolation mode) for port QN on cell U_ctrl_logic_sar_reg_out_reg_6_ for parameter Cout. Lowest table value = 0.001000, highest table value = 0.208000, value = 0.000000 (POW-046)
+Note - message 'POW-046' limit (10) exceeded. Remainder will be suppressed.
+
+  Cell Internal Power    = 1.15e+06 pW ( 27.1%)
+  Net Switching Power    = 3.08e+06 pW ( 72.9%)
+Total Dynamic Power      = 4.23e+06 pW (100.0%)
+
+Cell Leakage Power       = 1.43e+07 pW
+
+
+  Attributes
+  ----------
+      u  -  User defined power group
+      i  -  Includes clock pin internal power
+
+Power Group         Internal Power        Switching Power          Leakage Power            Total Power    (   %  )    Attrs
+-----------------------------------------------------------------------------------------------------------------------------
+io_pad                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+memory                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+black_box                 0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+clock_network             7.90e+05               0.00e+00               0.00e+00               7.90e+05    (  4.3%)        i
+register                  4.54e+05               1.52e+06               6.16e+06               8.14e+06    ( 44.0%)         
+sequential               -5.86e+05               5.24e+05               7.17e+06               7.11e+06    ( 38.4%)         
+combinational             4.91e+05               1.04e+06               9.26e+05               2.45e+06    ( 13.3%)         
+-----------------------------------------------------------------------------------------------------------------------------
+Total                     1.15e+06 pW            3.08e+06 pW            1.43e+07 pW            1.85e+07 pW
+Information: Activity for scenario default was cached, no propagation required. (POW-005)
+Information: Activity for scenario default was cached, no propagation required. (POW-005)
+Information: Activity for scenario default was cached, no propagation required. (POW-005)
+icc2_shell> gui_load_cell_density_mm
+1
+icc2_shell> create_channel_congestion_map -virtual_flat -boundary [get_attribute [current_block] boundary]
+Warning: Didn't find any enabled planning block for create_channel_congestion_map. (DPPA-268)
+icc2_shell> analyze_power_plan -nets {VDD} -voltage 0.9 -power_budget 500
+Primary Net : VDD    Secondary Net:
+Loading cell instances...
+Number of Standard Cells: 188
+Number of Macro Cells: 0
+Number of IO Pad Cells: 0
+Loading P/G wires and vias...
+Percentage of routing tracks used by P/G nets 
+=============================================
+       layer |    Shape |  Spacing |    Total
+=============================================
+          PO |   0.000% |   0.000% |   0.000% 
+          M1 |  12.031% |   0.009% |  12.041% 
+          M2 |   1.359% |   0.419% |   1.778% 
+          M3 |   1.443% |   3.849% |   5.292% 
+          M4 |   1.263% |   0.421% |   1.684% 
+          M5 |   1.443% |   3.849% |   5.292% 
+          M6 |   1.347% |   0.505% |   1.852% 
+          M7 |   1.851% |   3.701% |   5.552% 
+          M8 |  33.333% |  11.111% |  44.444% 
+          M9 |   0.000% |   0.000% |   0.000% 
+Number of VDD Wires: 12
+Number of VDD Vias: 135
+Loading RC extraction...
+Power Supply Voltage : 0.900V
+PNA: begin analyzing net VDD...
+PNA: calculating cell instance power...
+Total Power Consumption of Net VDD : 500.000mW
+PNA: connecting instances...
+Total std cells port current : 555.556 mA
+Total hard macro port current : 0.000 mA
+PNA: loading power taps...
+Use virtual power tap at (35.220 23.540) on layer M9.
+Use virtual power tap at (35.220 18.445) on layer M9.
+Use virtual power tap at (35.220 3.200) on layer M9.
+PNA: constructing virtual grid...
+Total virtual grid current : 0.000 mA
+Total current: 555.556 mA
+PNA: extracting wires...
+PNA: retrieving RC values...
+PNA: simulating power network...
+Total assigned port current : 555.555 mA
+Total assigned virtual grid current : 0.000 mA
+Network information of net: VDD 
+Number of extracted resistors: 396 
+Number of all nodes: 375 
+Number of pad nodes: 3 
+Number of current sink nodes: 192 
+Number of internal nodes: 372 
+Pad (35.220 23.540) on Layer M9 Supplies 190.798 mA Current
+Pad (35.220 18.445) on Layer M9 Supplies 186.605 mA Current
+Pad (35.220 3.200) on Layer M9 Supplies 178.153 mA Current
+Maximum IR Drop for Net VDD: 217.186 mV at (34.760 29.800) on layer M1
+icc2_shell> exit
+Maximum memory usage for this session: 748.06 MB
+Maximum memory usage for this session including child processes: 748.06 MB
+CPU usage for this session:     92 seconds (  0.03 hours)
+Elapsed time for this session:   2737 seconds (  0.76 hours)
+Thank you for using IC Compiler II.
+

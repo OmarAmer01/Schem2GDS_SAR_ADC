@@ -1,0 +1,32 @@
+ 
+****************************************
+Report : area
+Design : sar_dbe_ADC_RESOLUTION10
+Version: V-2023.12
+Date   : Fri May 10 17:39:29 2024
+****************************************
+
+Information: Changed minimum wire load model for 'sar_dbe_ADC_RESOLUTION10' from '8000' to '8000'. (OPT-171)
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    saed90nm_max_htm_lvt (File: /eda/synopsys/SAED90_EDK/SAED_EDK90nm/Digital_Standard_cell_Library/synopsys/models/saed90nm_max_htm_lvt.db)
+
+Number of ports:                           14
+Number of nets:                            48
+Number of cells:                           35
+Number of combinational cells:             12
+Number of sequential cells:                22
+Number of macros/black boxes:               0
+Number of buf/inv:                         12
+Number of references:                       4
+
+Combinational area:                 66.355202
+Buf/Inv area:                       66.355202
+Noncombinational area:             739.123222
+Macro/Black Box area:                0.000000
+Net Interconnect area:              25.054050
+
+Total cell area:                   805.478424
+Total area:                        830.532474
+1

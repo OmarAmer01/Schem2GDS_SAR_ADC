@@ -1,0 +1,14 @@
+ 
+****************************************
+Report : hierarchy
+Design : sar_dbe_ADC_RESOLUTION10
+Version: V-2023.12
+Date   : Fri May 10 17:39:29 2024
+****************************************
+
+sar_dbe_ADC_RESOLUTION10
+    DFFARX1_LVT          saed90nm_max_htm_lvt
+    DFFASRX1_LVT         saed90nm_max_htm_lvt
+    DFFASX1_LVT          saed90nm_max_htm_lvt
+    INVX0_LVT            saed90nm_max_htm_lvt
+1

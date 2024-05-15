@@ -1,0 +1,96 @@
+#@ # 
+#@ # Running icc2_shell Version V-2023.12 for linux64 -- Nov 23, 2023
+#@ # Date:   Tue May 14 14:53:07 2024
+#@ # Run by: vlsi@elc-auc-vlsi-28-lnx
+#@ 
+
+gui_set_pref_value -category {SelectByNamePalette} -key {ObjectType} -value {Logical Cells}
+open_lib /run/media/vlsi/MALAK_AHMED/the_final_inshallah/asic_final/impl/pnr/scripts/SAR_DBE.dlib -edit
+open_block /run/media/vlsi/MALAK_AHMED/the_final_inshallah/asic_final/impl/pnr/scripts/SAR_DBE.dlib:routing.design
+win_set_filter -visible -class cell -filter {assembly_die_margin clock_margin hard_macro_margin hard_margin route_blockage_margin seal_ring_margin soft_margin} -layer {}
+win_set_filter -visible -class pseudo_bump -filter {deleted} -layer {}
+win_set_filter -visible -class pseudo_tsv -filter {deleted} -layer {}
+win_set_filter -visible -class placement_blockage -filter {wiring} -layer {0-77}
+win_set_filter -expand_cell_types {soft_macro  }
+win_set_select_class -visible {cell port bound routing_blockage shaping_blockage pg_region bump_region pseudo_bump pseudo_tsv pin_blockage block_shielding topology_node topology_edge topology_repeater annotation_shape core_area die_area edit_group shape via terminal fill_cell placement_blockage }
+win_set_filter -class cell -filter {array assembly_die_margin clock_margin hard_macro_margin hard_margin route_blockage_margin seal_ring_margin soft_margin} -layer {}
+win_set_filter -class pseudo_bump -filter {deleted} -layer {}
+win_set_filter -class pseudo_tsv -filter {deleted} -layer {}
+win_set_filter -class placement_blockage -filter {wiring} -layer {0-77}
+win_set_select_class {cell port bound routing_blockage shaping_blockage pg_region bump_region pseudo_bump pseudo_tsv pin_blockage topology_node topology_edge topology_repeater annotation_shape edit_group shape via placement_blockage }
+link_block
+set_virtual_pad -net VDD -coordinate
+set_virtual_pad -net VDD -coordinates
+gui_scroll -window [gui_get_current_window -view] -hrel .2
+gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -start StretchTool
+gui_mouse_tool -window [gui_get_current_window -types Layout -mru] -reset
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+set_virtual_pad -net VDD -coordinates {35.22 23.54}
+
+set_virtual_pad -net VDD -coordinates {35.22 18.445}
+
+set_virtual_pad -net VDD -coordinates {35.22 23.54}
+
+set_virtual_pad -net VDD -coordinates {35.22 3.2}
+set_virtual_pad -net VDD -coordinate {35.22 23.54}
+
+set_virtual_pad -net VDD -coordinate {35.22 18.445}
+
+set_virtual_pad -net VDD -coordinate {35.22 23.54}
+
+set_virtual_pad -net VDD -coordinate {35.22 3.2}
+set_virtual_pad -net VDD -coordinate {35.22 23.54}
+set_virtual_pad -net VDD -coordinate {35.22 18.445}
+analyze_power_plan -nets {VDD} -voltage 0.9 -power_budget 500
+set_virtual_pad -net VDD -coordinate {35.22 3.2}
+analyze_power_plan -nets {VDD} -voltage 0.9 -power_budget 500
+gui_write_window_image -file {/run/media/vlsi/MALAK_AHMED/the_final_inshallah/asic_final/photo_session/routing/pna_ir_drop.png} -window Layout.1
+gui_show_map -window [gui_get_current_window -types Layout -mru] -map {whatIfChannelCongestionMap} -show {true}
+gui_set_map_option -map {whatIfChannelCongestionMap} -option {hierarchical} -value {false}
+create_channel_congestion_map -virtual_flat -boundary [get_attribute [current_block] boundary]
+gui_show_map -window [gui_get_current_window -types Layout -mru] -map {globalCongestionMap} -show {true}
+gui_set_map_option -map {globalCongestionMap} -option {rule_level} -value {hard}
+report_congestion -rerun_global_router
+gui_show_map -window [gui_get_current_window -types Layout -mru] -map {cellDensityMap} -show {true}
+gui_load_cell_density_mm
+gui_write_window_image -file {/run/media/vlsi/MALAK_AHMED/the_final_inshallah/asic_final/photo_session/routing/cell_density.png} -window BlockWindow.1
+gui_show_map -window [gui_get_current_window -types Layout -mru] -map {pinDensityMap} -show {true}
+gui_load_pin_density_mm
+gui_show_map -window [gui_get_current_window -types Layout -mru] -map {blockPinDensityMap} -show {true}
+check_pin_placement -pin_density_map true -window_length 0
+gui_show_map -window [gui_get_current_window -types Layout -mru] -map {effectiveVoltageAreas} -show {true}
+gui_show_map -window [gui_get_current_window -types Layout -mru] -map {pnaElectromigrationMap} -show {true}
+gui_set_map_option -map {pnaElectromigrationMap} -option {layer} -value {M1}
+gui_show_map -window [gui_get_current_window -types Layout -mru] -map {pnaVoltageDropMap} -show {true}
+gui_show_map -window [gui_get_current_window -types Layout -mru] -map {pnaElectromigrationMap} -show {true}
+gui_write_window_image -file {/run/media/vlsi/MALAK_AHMED/the_final_inshallah/asic_final/photo_session/routing/em.png} -window BlockWindow.1
+gui_show_map -window [gui_get_current_window -types Layout -mru] -map {metalPatternDensityMap} -show {true}
+gui_set_map_option -map {metalPatternDensityMap} -option {layer} -value {M1}
+load_metal_pattern_density
+gui_show_map -window [gui_get_current_window -types Layout -mru] -map {powerDensityMap} -show {true}
+gui_set_map_option -map {powerDensityMap} -option {hierarchical} -value {false}
+gui_load_power_density_mm -scenario default
+gui_set_map_option -map {powerDensityMap} -option {grid_dimension} -value {3}
+gui_set_map_option -map {powerDensityMap} -option {grid_dimension} -value {2}
+gui_write_window_image -file {/run/media/vlsi/MALAK_AHMED/the_final_inshallah/asic_final/photo_session/routing/power_density.png} -window BlockWindow.1
+gui_show_map -window [gui_get_current_window -types Layout -mru] -map {channelCongestionMap} -show {true}
+gui_set_map_option -map {channelCongestionMap} -option {rule_level} -value {hard}
+gui_show_map -window [gui_get_current_window -types Layout -mru] -map {channelCongestionMap} -show {false}
+gui_zoom -window [gui_get_current_window -types Layout -mru] -factor 2 -at_point {26.105 27.345}
+gui_zoom -window [gui_get_current_window -types Layout -mru] -factor 2 -at_point {26.105 27.345}
+gui_zoom -window [gui_get_current_window -types Layout -mru] -factor 2 -at_point {26.105 27.345}
+win_select_objects -slct_targets global -at {26.030 25.865} -radius 0.0053
+gui_zoom -window [gui_get_current_window -types Layout -mru] -factor 0.5 -at_point {26.030 25.900}
+gui_zoom -window [gui_get_current_window -types Layout -mru] -factor 0.5 -at_point {26.025 25.905}
+gui_zoom -window [gui_get_current_window -types Layout -mru] -factor 0.5 -at_point {26.035 25.915}
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_scroll -window [gui_get_current_window -view] -vrel .2
+gui_load_cell_density_mm
+create_channel_congestion_map -virtual_flat -boundary [get_attribute [current_block] boundary]
+analyze_power_plan -nets {VDD} -voltage 0.9 -power_budget 500
+gui_show_map -window [gui_get_current_window -types Layout -mru] -map {cellDensityMap} -show {true}
+gui_set_map_option -map {cellDensityMap} -option {grid_dimension} -value {2}
+gui_write_window_image -file {/run/media/vlsi/MALAK_AHMED/the_final_inshallah/asic_final/photo_session/routing/cell_density.png} -window Layout.1
+exit

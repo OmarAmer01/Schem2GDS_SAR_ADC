@@ -1,0 +1,99 @@
+ 
+****************************************
+Report : cell
+Design : sar_dbe_ADC_RESOLUTION10
+Version: V-2023.12
+Date   : Fri May 10 17:39:29 2024
+****************************************
+
+Attributes:
+    b - black box (unknown)
+    h - hierarchical
+    n - noncombinational
+    r - removable
+    u - contains unmapped logic
+
+Cell                      Reference       Library             Area  Attributes
+--------------------------------------------------------------------------------
+U2                        INVX0_LVT       saed90nm_max_htm_lvt
+                                                          5.529600  
+U5                        INVX0_LVT       saed90nm_max_htm_lvt
+                                                          5.529600  
+U7                        INVX0_LVT       saed90nm_max_htm_lvt
+                                                          5.529600  
+U9                        INVX0_LVT       saed90nm_max_htm_lvt
+                                                          5.529600  
+U11                       INVX0_LVT       saed90nm_max_htm_lvt
+                                                          5.529600  
+U13                       INVX0_LVT       saed90nm_max_htm_lvt
+                                                          5.529600  
+U15                       INVX0_LVT       saed90nm_max_htm_lvt
+                                                          5.529600  
+U17                       INVX0_LVT       saed90nm_max_htm_lvt
+                                                          5.529600  
+U19                       INVX0_LVT       saed90nm_max_htm_lvt
+                                                          5.529600  
+U21                       INVX0_LVT       saed90nm_max_htm_lvt
+                                                          5.529600  
+U24                       INVX0_LVT       saed90nm_max_htm_lvt
+                                                          5.529600  
+U26                       INVX0_LVT       saed90nm_max_htm_lvt
+                                                          5.529600  
+U_ctrl_logic_sar_reg_out_reg_0_
+                          DFFASRX1_LVT    saed90nm_max_htm_lvt
+                                                          35.020802 n
+U_ctrl_logic_sar_reg_out_reg_1_
+                          DFFASRX1_LVT    saed90nm_max_htm_lvt
+                                                          35.020802 n
+U_ctrl_logic_sar_reg_out_reg_2_
+                          DFFASRX1_LVT    saed90nm_max_htm_lvt
+                                                          35.020802 n
+U_ctrl_logic_sar_reg_out_reg_3_
+                          DFFASRX1_LVT    saed90nm_max_htm_lvt
+                                                          35.020802 n
+U_ctrl_logic_sar_reg_out_reg_4_
+                          DFFASRX1_LVT    saed90nm_max_htm_lvt
+                                                          35.020802 n
+U_ctrl_logic_sar_reg_out_reg_5_
+                          DFFASRX1_LVT    saed90nm_max_htm_lvt
+                                                          35.020802 n
+U_ctrl_logic_sar_reg_out_reg_6_
+                          DFFASRX1_LVT    saed90nm_max_htm_lvt
+                                                          35.020802 n
+U_ctrl_logic_sar_reg_out_reg_7_
+                          DFFASRX1_LVT    saed90nm_max_htm_lvt
+                                                          35.020802 n
+U_ctrl_logic_sar_reg_out_reg_8_
+                          DFFASRX1_LVT    saed90nm_max_htm_lvt
+                                                          35.020802 n
+U_ctrl_logic_sar_reg_out_reg_9_
+                          DFFASRX1_LVT    saed90nm_max_htm_lvt
+                                                          35.020802 n
+U_ctrl_logic_sar_reg_out_reg_10_
+                          DFFASRX1_LVT    saed90nm_max_htm_lvt
+                                                          35.020802 n
+u_SET_PROP_q_reg_0_       DFFARX1_LVT     saed90nm_max_htm_lvt
+                                                          32.256001 n
+u_SET_PROP_q_reg_1_       DFFARX1_LVT     saed90nm_max_htm_lvt
+                                                          32.256001 n
+u_SET_PROP_q_reg_2_       DFFARX1_LVT     saed90nm_max_htm_lvt
+                                                          32.256001 n
+u_SET_PROP_q_reg_3_       DFFARX1_LVT     saed90nm_max_htm_lvt
+                                                          32.256001 n
+u_SET_PROP_q_reg_4_       DFFARX1_LVT     saed90nm_max_htm_lvt
+                                                          32.256001 n
+u_SET_PROP_q_reg_5_       DFFARX1_LVT     saed90nm_max_htm_lvt
+                                                          32.256001 n
+u_SET_PROP_q_reg_6_       DFFARX1_LVT     saed90nm_max_htm_lvt
+                                                          32.256001 n
+u_SET_PROP_q_reg_7_       DFFARX1_LVT     saed90nm_max_htm_lvt
+                                                          32.256001 n
+u_SET_PROP_q_reg_8_       DFFARX1_LVT     saed90nm_max_htm_lvt
+                                                          32.256001 n
+u_SET_PROP_q_reg_9_       DFFARX1_LVT     saed90nm_max_htm_lvt
+                                                          32.256001 n
+u_SET_PROP_q_reg_10_      DFFASX1_LVT     saed90nm_max_htm_lvt
+                                                          31.334400 n
+--------------------------------------------------------------------------------
+Total 34 cells                                            805.478424
+1
