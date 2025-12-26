@@ -118,10 +118,7 @@ Implemented using **Synopsys IC Compiler II**.
 
 ## Project Structure
 ```text
-├── rtl/        # Synthesizable SystemVerilog
-├── tb/         # Class-based verification environment
-├── synth/      # DC scripts & reports
-├── formal/     # Formality setup
-├── icc2/       # P&R scripts
-├── reports/    # Timing, area, power
-└── gds/        # Final layout
+├── hdl/        # Synthesizable SystemVerilog
+├── ver/        # Class-based verification environment
+├── impl/       # ASIC backend scripts
+└── intf/       # SystemVerilog Interfaces
